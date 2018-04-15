@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wings/Projects/OSlabs/oslab1.c
+stdio.h
+-
+unistd.h
+-
+signal.h
+-
+stdlib.h
+-
+string.h
+-
+wait.h
+-
+

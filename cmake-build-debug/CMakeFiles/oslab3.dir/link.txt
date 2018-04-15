@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/oslab3.dir/oslab3.c.o  -o oslab3 -lpthread 

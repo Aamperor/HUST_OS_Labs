@@ -1,0 +1,2 @@
+/usr/bin/ar qc libzxcpyp_lib.a  CMakeFiles/zxcpyp_lib.dir/myOSlib_Sem.c.o
+/usr/bin/ranlib libzxcpyp_lib.a

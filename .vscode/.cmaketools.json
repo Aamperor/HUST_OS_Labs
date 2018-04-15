@@ -1,0 +1,51 @@
+{
+  "variant": {
+    "label": "Debug",
+    "keywordSettings": {
+      "buildType": "debug"
+    },
+    "description": "Emit debug information without performing optimizations"
+  },
+  "activeEnvironments": [],
+  "codeModel": {
+    "configurations": [
+      {
+        "name": "Debug",
+        "projects": [
+          {
+            "buildDirectory": "/home/wings/Projects/OSlabs/build",
+            "name": "OSlabs",
+            "sourceDirectory": "/home/wings/Projects/OSlabs",
+            "targets": [
+              {
+                "artifacts": [
+                  "/home/wings/Projects/OSlabs/build/oslab1"
+                ],
+                "buildDirectory": "/home/wings/Projects/OSlabs/build",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g  ",
+                    "isGenerated": false,
+                    "language": "C",
+                    "sources": [
+                      "oslab1.c"
+                    ]
+                  }
+                ],
+                "fullName": "oslab1",
+                "linkLanguageFlags": "-g",
+                "linkerLanguage": "C",
+                "name": "oslab1",
+                "sourceDirectory": "/home/wings/Projects/OSlabs",
+                "type": "EXECUTABLE"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cookie": "0.614566204850943",
+    "inReplyTo": "codemodel",
+    "type": "reply"
+  }
+}

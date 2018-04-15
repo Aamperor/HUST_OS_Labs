@@ -1,0 +1,3 @@
+/home/wings/Projects/OSlabs/build/CMakeFiles/rebuild_cache.dir
+/home/wings/Projects/OSlabs/build/CMakeFiles/oslab1.dir
+/home/wings/Projects/OSlabs/build/CMakeFiles/edit_cache.dir

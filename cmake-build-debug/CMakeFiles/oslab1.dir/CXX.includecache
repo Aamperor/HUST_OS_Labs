@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wings/Projects/OSlabs/oslab1.cpp
+stdio.h
+-
+unistd.h
+-
+signal.h
+-
+stdlib.h
+-
+

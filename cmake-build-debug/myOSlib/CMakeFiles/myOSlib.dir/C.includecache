@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wings/Projects/OSlabs/myOSlib/myOSlib_Sem.c
+myOSlib_Sem.h
+/home/wings/Projects/OSlabs/myOSlib/myOSlib_Sem.h
+
+/home/wings/Projects/OSlabs/myOSlib/myOSlib_Sem.h
+sys/types.h
+-
+linux/sem.h
+-
+
