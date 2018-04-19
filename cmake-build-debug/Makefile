@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/wings/Projects/OSlabs/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/opt/clion/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named oslab2
+
+# Build rule for target.
+oslab2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oslab2
+.PHONY : oslab2
+
+# fast build rule for target.
+oslab2/fast:
+	$(MAKE) -f CMakeFiles/oslab2.dir/build.make CMakeFiles/oslab2.dir/build
+.PHONY : oslab2/fast
+
+#=============================================================================
+# Target rules for targets named oslab1
+
+# Build rule for target.
+oslab1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oslab1
+.PHONY : oslab1
+
+# fast build rule for target.
+oslab1/fast:
+	$(MAKE) -f CMakeFiles/oslab1.dir/build.make CMakeFiles/oslab1.dir/build
+.PHONY : oslab1/fast
+
+#=============================================================================
 # Target rules for targets named oslab3
 
 # Build rule for target.
@@ -122,6 +148,60 @@ oslab3: cmake_check_build_system
 oslab3/fast:
 	$(MAKE) -f CMakeFiles/oslab3.dir/build.make CMakeFiles/oslab3.dir/build
 .PHONY : oslab3/fast
+
+oslab1.o: oslab1.c.o
+
+.PHONY : oslab1.o
+
+# target to build an object file
+oslab1.c.o:
+	$(MAKE) -f CMakeFiles/oslab1.dir/build.make CMakeFiles/oslab1.dir/oslab1.c.o
+.PHONY : oslab1.c.o
+
+oslab1.i: oslab1.c.i
+
+.PHONY : oslab1.i
+
+# target to preprocess a source file
+oslab1.c.i:
+	$(MAKE) -f CMakeFiles/oslab1.dir/build.make CMakeFiles/oslab1.dir/oslab1.c.i
+.PHONY : oslab1.c.i
+
+oslab1.s: oslab1.c.s
+
+.PHONY : oslab1.s
+
+# target to generate assembly for a file
+oslab1.c.s:
+	$(MAKE) -f CMakeFiles/oslab1.dir/build.make CMakeFiles/oslab1.dir/oslab1.c.s
+.PHONY : oslab1.c.s
+
+oslab2.o: oslab2.c.o
+
+.PHONY : oslab2.o
+
+# target to build an object file
+oslab2.c.o:
+	$(MAKE) -f CMakeFiles/oslab2.dir/build.make CMakeFiles/oslab2.dir/oslab2.c.o
+.PHONY : oslab2.c.o
+
+oslab2.i: oslab2.c.i
+
+.PHONY : oslab2.i
+
+# target to preprocess a source file
+oslab2.c.i:
+	$(MAKE) -f CMakeFiles/oslab2.dir/build.make CMakeFiles/oslab2.dir/oslab2.c.i
+.PHONY : oslab2.c.i
+
+oslab2.s: oslab2.c.s
+
+.PHONY : oslab2.s
+
+# target to generate assembly for a file
+oslab2.c.s:
+	$(MAKE) -f CMakeFiles/oslab2.dir/build.make CMakeFiles/oslab2.dir/oslab2.c.s
+.PHONY : oslab2.c.s
 
 oslab3.o: oslab3.c.o
 
@@ -156,9 +236,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... oslab2"
+	@echo "... oslab1"
 	@echo "... oslab3"
+	@echo "... edit_cache"
+	@echo "... oslab1.o"
+	@echo "... oslab1.i"
+	@echo "... oslab1.s"
+	@echo "... oslab2.o"
+	@echo "... oslab2.i"
+	@echo "... oslab2.s"
 	@echo "... oslab3.o"
 	@echo "... oslab3.i"
 	@echo "... oslab3.s"

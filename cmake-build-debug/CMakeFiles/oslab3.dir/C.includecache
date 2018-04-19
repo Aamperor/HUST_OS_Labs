@@ -13,13 +13,15 @@ stdlib.h
 -
 pthread.h
 -
+sys/stat.h
+-
 sys/ipc.h
+-
+sys/sem.h
 -
 sys/shm.h
 -
 sys/types.h
--
-sys/sem.h
 -
 unistd.h
 -
@@ -29,6 +31,6 @@ string.h
 -
 fcntl.h
 -
-sys/stat.h
+signal.h
 -
 
