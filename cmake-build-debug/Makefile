@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named oslab2
-
-# Build rule for target.
-oslab2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 oslab2
-.PHONY : oslab2
-
-# fast build rule for target.
-oslab2/fast:
-	$(MAKE) -f CMakeFiles/oslab2.dir/build.make CMakeFiles/oslab2.dir/build
-.PHONY : oslab2/fast
-
-#=============================================================================
 # Target rules for targets named oslab1
 
 # Build rule for target.
@@ -148,6 +135,59 @@ oslab3: cmake_check_build_system
 oslab3/fast:
 	$(MAKE) -f CMakeFiles/oslab3.dir/build.make CMakeFiles/oslab3.dir/build
 .PHONY : oslab3/fast
+
+#=============================================================================
+# Target rules for targets named oslab2
+
+# Build rule for target.
+oslab2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oslab2
+.PHONY : oslab2
+
+# fast build rule for target.
+oslab2/fast:
+	$(MAKE) -f CMakeFiles/oslab2.dir/build.make CMakeFiles/oslab2.dir/build
+.PHONY : oslab2/fast
+
+#=============================================================================
+# Target rules for targets named myls
+
+# Build rule for target.
+myls: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myls
+.PHONY : myls
+
+# fast build rule for target.
+myls/fast:
+	$(MAKE) -f CMakeFiles/myls.dir/build.make CMakeFiles/myls.dir/build
+.PHONY : myls/fast
+
+myls.o: myls.c.o
+
+.PHONY : myls.o
+
+# target to build an object file
+myls.c.o:
+	$(MAKE) -f CMakeFiles/myls.dir/build.make CMakeFiles/myls.dir/myls.c.o
+.PHONY : myls.c.o
+
+myls.i: myls.c.i
+
+.PHONY : myls.i
+
+# target to preprocess a source file
+myls.c.i:
+	$(MAKE) -f CMakeFiles/myls.dir/build.make CMakeFiles/myls.dir/myls.c.i
+.PHONY : myls.c.i
+
+myls.s: myls.c.s
+
+.PHONY : myls.s
+
+# target to generate assembly for a file
+myls.c.s:
+	$(MAKE) -f CMakeFiles/myls.dir/build.make CMakeFiles/myls.dir/myls.c.s
+.PHONY : myls.c.s
 
 oslab1.o: oslab1.c.o
 
@@ -237,10 +277,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... oslab2"
+	@echo "... edit_cache"
 	@echo "... oslab1"
 	@echo "... oslab3"
-	@echo "... edit_cache"
+	@echo "... oslab2"
+	@echo "... myls"
+	@echo "... myls.o"
+	@echo "... myls.i"
+	@echo "... myls.s"
 	@echo "... oslab1.o"
 	@echo "... oslab1.i"
 	@echo "... oslab1.s"

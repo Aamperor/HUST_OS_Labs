@@ -51,7 +51,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/oslab2.dir/DependInfo.cmake"
   "CMakeFiles/oslab1.dir/DependInfo.cmake"
   "CMakeFiles/oslab3.dir/DependInfo.cmake"
+  "CMakeFiles/oslab2.dir/DependInfo.cmake"
+  "CMakeFiles/myls.dir/DependInfo.cmake"
   )

@@ -1,5 +1,6 @@
 /home/wings/Projects/OSlabs/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/wings/Projects/OSlabs/cmake-build-debug/CMakeFiles/oslab2.dir
+/home/wings/Projects/OSlabs/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/wings/Projects/OSlabs/cmake-build-debug/CMakeFiles/oslab1.dir
 /home/wings/Projects/OSlabs/cmake-build-debug/CMakeFiles/oslab3.dir
-/home/wings/Projects/OSlabs/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wings/Projects/OSlabs/cmake-build-debug/CMakeFiles/oslab2.dir
+/home/wings/Projects/OSlabs/cmake-build-debug/CMakeFiles/myls.dir
