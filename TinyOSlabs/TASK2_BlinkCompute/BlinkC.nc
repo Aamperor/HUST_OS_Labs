@@ -60,6 +60,7 @@ module BlinkC @safe()
 
 implementation
 {
+    uint8 dummyVar1=4;
     event void Boot.booted()
     {
         call Timer0.startPeriodic( 250 );
@@ -72,6 +73,7 @@ implementation
         uint32_t i=0;
         dbg("BlinkC", "Timer 0 fired @ %s.\n", sim_time_string());
         printf("LED Toggle: 0\n");
+        printf("Here is a uint8: %u\n", dummyVar1);
         for (i = 0; i < 1000; i++)
         {
             call Leds.led0Toggle();

@@ -55,64 +55,64 @@ public class TestSerial implements MessageListener
     this.moteIF.registerListener(new SenseMsg(), this);
   }
 
-  public void sendPackets() 
-  {
-    int counter = 0;
-    SenseMsg payload = new SenseMsg();
+  // public void sendPackets() 
+  // {
+  //   int counter = 0;
+  //   SenseMsg payload = new SenseMsg();
 
-    try 
-    {
-      while (true) 
-      {
-        System.out.println("Sending packet " + counter);
-        payload.set_counter(counter);
-        moteIF.send(0, payload);
-        counter++;
-        try 
-        {
-          Thread.sleep(1000);
-        } 
-        catch (InterruptedException exception) 
-        {
-        }
-      }
-    } 
-    catch (IOException exception) 
-    {
-      System.err.println("Exception thrown when sending packets. Exiting.");
-      System.err.println(exception);
-    }
-  }
+  //   try 
+  //   {
+  //     while (true) 
+  //     {
+  //       System.out.println("Sending packet " + counter);
+  //       payload.set_counter(counter);
+  //       moteIF.send(0, payload);
+  //       counter++;
+  //       try 
+  //       {
+  //         Thread.sleep(1000);
+  //       } 
+  //       catch (InterruptedException exception) 
+  //       {
+  //       }
+  //     }
+  //   } 
+  //   catch (IOException exception) 
+  //   {
+  //     System.err.println("Exception thrown when sending packets. Exiting.");
+  //     System.err.println(exception);
+  //   }
+  // }
 
   public void messageReceived(int to, Message message) 
   {
     SenseMsg msg = (SenseMsg)message;
-    int type = msg.get_nodeid();
+    int type = msg.get_kind();
     double tempature;
     double humidity;
     double photo;
     switch (type) 
     {
-      case 1:
-        tempature = -40.1 + 0.01 * msg.get_counter();
+      case 0:
+        tempature = -40.1 + 0.01 * msg.get_data();
         System.out.printf("received temperature:%.2f", tempature);
         System.out.println("℃C");
         break;
-      case 2:
-        humidity = -4 + 0.0405 * msg.get_counter() +
-                  (-2.8 / 1000000) * msg.get_counter() * msg.get_counter();
+      case 1:
+        humidity = -4 + 0.0405 * msg.get_data() +
+                  (-2.8 / 1000000) * msg.get_data() * msg.get_data();
         System.out.printf("received humidity:%.2f", humidity);
         System.out.println("%");
         break;
-      case 3:
-        photo = msg.get_counter() * 1.5 / 4096 / 10000;
+      case 2:
+        photo = msg.get_data() * 1.5 / 4096 / 10000;
         photo = 0.625 * 1000000 * photo * 1000;
         System.out.printf("received photo:%.2f", photo);
         System.out.println("Lux");
         System.out.println();
         break;
       default:
-        System.out.println("received unknow data:" + msg.get_counter());
+        System.out.println("received unknow data:" + msg.get_data());
         break;
     }
   }
@@ -153,6 +153,6 @@ public class TestSerial implements MessageListener
 
     MoteIF mif = new MoteIF(phoenix);
     TestSerial serial = new TestSerial(mif);
-    serial.sendPackets();
+    //serial.sendPackets();
   }
 }

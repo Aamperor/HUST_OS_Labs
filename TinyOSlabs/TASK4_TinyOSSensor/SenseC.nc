@@ -84,7 +84,7 @@ implementation
             if (call AMSend.send(AM_BROADCAST_ADDR, &sense_packet, sizeof(SenseMsg)) == SUCCESS) // send msg successfully
             {
                 call Leds.led0Toggle();
-                locked == TRUE;
+                locked = TRUE;
             }
         }
        
@@ -105,7 +105,7 @@ implementation
             if (call AMSend.send(AM_BROADCAST_ADDR, &sense_packet, sizeof(SenseMsg)) == SUCCESS)
             {
                 call Leds.led1Toggle();
-                locked == TRUE;
+                locked = TRUE;
             }
         }
         
@@ -126,7 +126,7 @@ implementation
             if (call AMSend.send(AM_BROADCAST_ADDR, &sense_packet, sizeof(SenseMsg)) == SUCCESS) 
             {
                 call Leds.led2Toggle();
-                locked == TRUE;
+                locked = TRUE;
             }
         } 
     }

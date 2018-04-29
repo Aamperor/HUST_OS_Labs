@@ -18,15 +18,17 @@
 #include <fcntl.h>
 #include <signal.h>
 
-#define MAXLENGTH 1024
-#define END '\0'        //for max/linux end notation
+#define MAXLENGTH 3
+#define END 'F'        //for max/linux end notation
 
 int pid1;
 int pid2;
 int sem_id = 0;
 int shm_id = 0;
-FILE *fin = NULL;
-FILE *fout = NULL;
+int fin = 0;
+int fout = 0;
+static int write_index;      //the write pos of the ring cache
+static int read_index;
 
 void P(int semid, int index);
 
@@ -48,22 +50,30 @@ void readbuf_process();
 void writebuf_process();
 
 
-int main()
+int main(int argc,char** argv)
 {
+
+    // examine argv num
+    if(argc!=3)
+    {
+        printf("argc error, must be 3");
+    }
+
+
     //init file pointer
     int pid=0;
     pid=getpid();
     int status;
     printf("pid:%d\n",pid);
-    fin = fopen("data/fin.txt", "r+");
-    if (fin == NULL)
+    fin = open(argv[1], O_RDONLY,S_IRUSR|S_IWUSR);
+    if (fin == -1)
     {
         printf("fin error\n");
         exit(1);
     }
 
-    fout = fopen("data/fout.txt", "w+");
-    if (fout == NULL)
+    fout = open(argv[2],O_CREAT|O_RDWR,S_IRUSR|S_IWUSR);
+    if (fout == -1)
     {
         printf("fout error\n");
         exit(1);
@@ -71,12 +81,13 @@ int main()
 
 
     //create shared memory group
-    if ((shm_id = shmget(IPC_PRIVATE, MAXLENGTH * sizeof(char), 0666 | IPC_CREAT)) == -1)
+    if ((shm_id = shmget(IPC_PRIVATE, (MAXLENGTH+2) * sizeof(char), 0777 | IPC_CREAT)) == -1)
     {
         printf("create shared memory group error\n");
         exit(1);
     }
     printf("shm_id:%d\n",shm_id);
+
 
     //set the semaphore value
     sem_id = semget((key_t)IPC_PRIVATE, 2, 0666 | IPC_CREAT);
@@ -95,9 +106,19 @@ int main()
         exit(1);
     }
 
+    char *head_addr = (char *) shmat(shm_id, NULL, 0);
+    if(head_addr==(void*)-1)
+    {
+        printf("write process error!\n");
+        exit(1);
+    }
+    head_addr[0]='\0';
+    head_addr[MAXLENGTH]='U';
+
     pid1 = fork();
     if (pid1 == 0)
     {
+        printf("pid1:0");
         writebuf_process();
         exit(0);
     }
@@ -133,8 +154,8 @@ int main()
             }
 
             //release the file
-            fclose(fin);
-            fclose(fout);
+            close(fin);
+            close(fout);
             printf("\n ALL PROCESS END\n");
             return 0;
         }
@@ -145,53 +166,64 @@ int main()
 
 void writebuf_process()
 {
+//    printf("inw");
     char *head_addr = (char *) shmat(shm_id, NULL, 0);
     if(head_addr==(void*)-1)
     {
-        printf("error!\n");
+        printf("write process error!\n");
         exit(1);
     }
-    int index = 0;      //the write pos of the ring cache
     char get = ' ';     //temp char
-    while (fread(&get, sizeof(char), 1, fin) != 0)
+    while (read(fin, &get,sizeof(char)) != 0)
     {
         P(sem_id, 1);
-        head_addr[index] = get;
-        printf("%c",get);
-        index++;
-        index = index % MAXLENGTH;
+        head_addr[write_index] = get;
+        head_addr[MAXLENGTH+1]=write_index;
+        printf("write_index:%d\n",write_index);
+        //printf("%c",get);
+        write_index++;
+        write_index = write_index % MAXLENGTH;
         V(sem_id, 0);
     }
-
     //write the end notation
     P(sem_id, 1);
-    head_addr[index] = END;
+    head_addr[MAXLENGTH] = 'F';
     V(sem_id, 0);
 }
 
 void readbuf_process()
 {
+    //printf("inr");
+
     char *head_addr = (char *)shmat(shm_id, NULL, 0);
     if(head_addr==(void*)-1)
     {
         printf("error!");
     }
-    //printf("after head_addr\n");
-    int index = 0;
+    char get=' ';
+
     for (; ;)
     {
+        printf("\n%c\n",head_addr[MAXLENGTH]);
         P(sem_id, 0);
-        char get = head_addr[index];
-        if (get == END)
+        if (head_addr[MAXLENGTH] == 'F')
         {
-            V(sem_id, 1);
-            return;
+            printf("readindex:------------%d\n",read_index);
+            printf("writeindex-----------%d\n",write_index);
+
+            if(read_index==head_addr[MAXLENGTH+1])
+            {
+                get = head_addr[read_index];
+                write(fout,&get, 1);
+                V(sem_id, 1);
+                return;
+            }
         }
-        fwrite(&get, sizeof(char), 1, fout);
-        //printf("read:%c\n", get);
-        head_addr[index] = END; // move the end notation
-        index++;
-        index = index % MAXLENGTH;
+        get = head_addr[read_index];
+        printf("read_index:%d\n",read_index);
+        int re=write(fout,&get, 1);
+        read_index++;
+        read_index = read_index % MAXLENGTH;
         V(sem_id, 1);
     }
 }
@@ -219,30 +251,6 @@ void V(int semid, int index)
 
 
 
-
-
-void readChild()
-{
-    char *head_addr = (char *)shmat(shm_id, 0, 0);
-    int index = 0;
-    //read
-    while (1)
-    {
-        P(sem_id,0); //init with 0
-        char get = head_addr[index];
-        if (get == '\0')
-        {
-            V(sem_id,1);
-            return; //reach the end
-        }
-        fwrite(&get, sizeof(char), 1, fout);
-        // printf("read:%c\n", get);
-        head_addr[index] = '\0';
-        index++;
-        index = index % 1024;
-        V(sem_id,1);
-    }
-}
 
 
 

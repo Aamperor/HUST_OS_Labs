@@ -2,7 +2,6 @@ CFLAGS += -I$(TOSDIR)/lib/printf
 PFLAGS += -DNEW_PRINTF_SEMANTICS
 CFLAGS += -DPRINTF_BUFFER_SIZE=128
 COMPONENT=SenseAppC
-include $(MAKERULES)
 
 BUILD_EXTRA_DEPS += SenseMsg.class 
 CLEAN_EXTRA = *.class SenseMsg.java

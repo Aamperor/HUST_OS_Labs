@@ -1,13 +1,13 @@
 <tos_image>
   <ident>
-    <userhash>C29B8097L</userhash>
-    <hostname>hover</hostname>
-    <platform>telosb</platform>
-    <uidhash>0A874964L</uidhash>
     <appname>BlinkAppC</appname>
-    <username>wings</username>
+    <uidhash>5DED9E79L</uidhash>
+    <timestamp>5AD88C0CL</timestamp>
     <deluge_support>no</deluge_support>
-    <timestamp>5AD5AFFAL</timestamp>
+    <userhash>C29B8097L</userhash>
+    <username>wings</username>
+    <platform>telosb</platform>
+    <hostname>hover</hostname>
   </ident>
   <image format="ihex">
 :104000005542200135D0085A8245CE123140003940

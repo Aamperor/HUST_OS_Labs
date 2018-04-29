@@ -14,7 +14,7 @@ typedef nx_struct SenseMsg
 
 enum 
 {
-  AM_TEST_SCESE_MSG = 0x89,
+  AM_SENSEMSG = 0x89,
 };
 
 #endif

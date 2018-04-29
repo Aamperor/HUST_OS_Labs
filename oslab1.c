@@ -10,13 +10,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include <wait.h>
+#include <errno.h>
+
 void process_sigint();
 void process_signal(int sig_no);
 pid_t pid1=-1;
 pid_t pid2=-1;
 int pipefd[2];
-int main()
+
+int main(int argc,char ** argv)
 {
+
+
 
     pipe(pipefd); //create the unnamed pipe
     signal(SIGINT,process_sigint);

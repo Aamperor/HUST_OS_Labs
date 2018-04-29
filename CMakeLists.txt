@@ -23,7 +23,7 @@ target_link_libraries(oslab2 ${CMAKE_THREAD_LIBS_INIT})
 add_executable(oslab3 oslab3.c)
 target_link_libraries(oslab2 ${CMAKE_THREAD_LIBS_INIT})
 
-
+add_executable(myls.c)
 
 #add_executable(oslab4 TinyOSlabs/Blink0_7/oslab4.c)
 #target_link_libraries(oslab4 ${CMAKE_THREAD_LIBS_INIT})
