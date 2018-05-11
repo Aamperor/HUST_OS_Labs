@@ -20,9 +20,6 @@ int pipefd[2];
 
 int main(int argc,char ** argv)
 {
-
-
-
     pipe(pipefd); //create the unnamed pipe
     signal(SIGINT,process_sigint);
 
