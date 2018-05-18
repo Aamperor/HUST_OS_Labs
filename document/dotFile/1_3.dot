@@ -1,0 +1,33 @@
+digraph demo
+{
+    subgraph cluster
+    {
+        label=mainprocess
+        start [shape=Mdiamond];
+        end [shape=Mdiamond];
+        node [shape="record"];
+        start->创建无名管道
+        ->"调用fork()产生子进程1"
+        ->"调用fork()产生子进程2"
+        "调用fork()产生子进程2"->等待子进程结束
+        等待子进程结束->等待子进程结束
+        等待子进程结束->输出子进程结束信息[label=收到信号]
+        输出子进程结束信息->end
+    }
+    subgraph cluster1
+    {
+        label="pid1循环"
+        进程1写管道
+        ->"发送计数count++"
+        ->"sleep(1)"
+    }
+    subgraph cluster2
+    {
+        label="pid2循环"
+        是否收到数据 [shape=Mdiamond];
+        进程2读管道
+        ->是否收到数据
+        是否收到数据->输出管道内容 [label="是"]
+        是否收到数据->"输出not receive" [label ="否"]
+    }
+}

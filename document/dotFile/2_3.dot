@@ -1,0 +1,46 @@
+digraph demo
+{
+    subgraph cluster0
+    {
+        label=mainprocess
+        start [shape=Mdiamond];
+        end [shape=Mdiamond];
+        node [shape="record"];
+        start
+        ->判断参数是为3个
+        ->输出当前进程pid
+        ->打开输入输出文件
+        ->创建信号量数组
+        ->初始化信号量
+        ->创建线程1
+        ->创建线程2
+        ->监视线程数量，如果线程1和线程2结束程序结束
+        ->end
+    }
+    subgraph cluster
+    {
+        label=thread1
+        node [shape="record"];
+        "i=100?" [shape="diamond"]
+        "i=100?"->线程1返回[label=是]
+        "i=100?"->"P(1)"[label=否]
+        "P(1)"
+        ->"total+=i"
+        ->"V(0)"
+        -> "i=100?"
+        "V(0)"->"P(0)" [style=dashed]
+    }
+    subgraph cluster2
+    {
+        label=thread2
+        node [shape="record"];
+        " i=100?" [shape="diamond"]
+        " i=100?"->线程2返回[label=是]
+        " i=100?"->"P(0)"[label=否]
+        "P(0)"  
+        ->输出totaol
+        ->"V(1)"
+        ->" i=100?" 
+        "V(1)"->"P(1)" [style=dashed]
+    }
+}

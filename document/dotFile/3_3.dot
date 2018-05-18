@@ -1,0 +1,29 @@
+digraph 3.3
+{
+    subgraph cluster
+    {
+            label=mainPorcess
+            start [shape=Mdiamond];
+            end [shape=Mdiamond];
+            node [shape="record"];
+            start
+            ->打开读写文件，赋值读写文件指针
+            ->创建共享内存组
+            ->创建信号量并初始化
+            ->共享内存位标志位初始化
+            ->"调用fork()产生thread1"
+            ->"调用fork()产生thread2"        
+            ->"等待thread1,thread2结束"
+            ->释放信号量
+            ->输出拷贝过程结束
+            ->end
+    }
+    subgraph cluster1
+    {
+        label=thread1
+        start [shape=Mdiamond];
+        end [shape=Mdiamond];
+        node [shape="record"];
+
+    }
+}
