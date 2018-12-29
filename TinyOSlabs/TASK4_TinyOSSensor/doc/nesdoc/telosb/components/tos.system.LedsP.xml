@@ -1,0 +1,91 @@
+<?xml version="1.0" ?><component loc="44:/opt/tinyos-2.1.2/tos/system/LedsP.nc" nicename="tos.system.LedsP" qname="LedsP" safe="">
+      <documentation loc="35:/opt/tinyos-2.1.2/tos/system/LedsP.nc">
+        <short>
+ The implementation of the standard 3 LED mote abstraction.</short>
+        <long>
+ The implementation of the standard 3 LED mote abstraction.
+
+ @author Joe Polastre
+ @author Philip Levis
+
+ @date   March 21, 2005
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="50:/opt/tinyos-2.1.2/tos/system/LedsP.nc" name="Led0" provided="0" ref="0x7f4ee75477b0">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led0" ref="0x7f4ee75477b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x7f4ee7547b30" scoped=""/>
+        <function-ref name="isInput" ref="0x7f4ee7547cc0" scoped=""/>
+        <function-ref name="toggle" ref="0x7f4ee7547e50" scoped=""/>
+        <function-ref name="isOutput" ref="0x7f4ee754d020" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee754d1b0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x7f4ee754d340" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee754d4d0" scoped=""/>
+        <function-ref name="clr" ref="0x7f4ee754d660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/system/LedsP.nc" name="Init" provided="1" ref="0x7f4ee75528e0">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x7f4ee75528e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7f4ee7552c60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/system/LedsP.nc" name="Led1" provided="0" ref="0x7f4ee754d980">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led1" ref="0x7f4ee754d980" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x7f4ee754dd00" scoped=""/>
+        <function-ref name="isInput" ref="0x7f4ee754c020" scoped=""/>
+        <function-ref name="toggle" ref="0x7f4ee754c1b0" scoped=""/>
+        <function-ref name="isOutput" ref="0x7f4ee754c340" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee754c4d0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x7f4ee754c660" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee754c7f0" scoped=""/>
+        <function-ref name="clr" ref="0x7f4ee754c980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/system/LedsP.nc" name="Leds" provided="1" ref="0x7f4ee754f020">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7f4ee754f020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7f4ee754f3a0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7f4ee754f530" scoped=""/>
+        <function-ref name="led1On" ref="0x7f4ee754f6c0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7f4ee754f850" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7f4ee754f9e0" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee754fb70" scoped=""/>
+        <function-ref name="led1Off" ref="0x7f4ee754fd00" scoped=""/>
+        <function-ref name="led2Off" ref="0x7f4ee754e4d0" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee754e020" scoped=""/>
+        <function-ref name="led0On" ref="0x7f4ee754e1b0" scoped=""/>
+        <function-ref name="led2On" ref="0x7f4ee754e340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/system/LedsP.nc" name="Led2" provided="0" ref="0x7f4ee754cca0">
+      <component-ref nicename="tos.system.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led2" ref="0x7f4ee754cca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x7f4ee75460a0" scoped=""/>
+        <function-ref name="isInput" ref="0x7f4ee7546230" scoped=""/>
+        <function-ref name="toggle" ref="0x7f4ee75463c0" scoped=""/>
+        <function-ref name="isOutput" ref="0x7f4ee7546550" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee75466e0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x7f4ee7546870" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee7546a00" scoped=""/>
+        <function-ref name="clr" ref="0x7f4ee7546b90" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

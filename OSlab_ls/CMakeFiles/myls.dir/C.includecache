@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/./include/myshlib.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/stat.h
+-
+dirent.h
+-
+string.h
+-
+
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/myls_opt.c
+stdio.h
+-
+sys/types.h
+-
+dirent.h
+-
+sys/stat.h
+-
+pwd.h
+-
+grp.h
+-
+getopt.h
+-
+stdbool.h
+-
+string.h
+-
+unistd.h
+-
+./include/myshlib.h
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/./include/myshlib.h
+

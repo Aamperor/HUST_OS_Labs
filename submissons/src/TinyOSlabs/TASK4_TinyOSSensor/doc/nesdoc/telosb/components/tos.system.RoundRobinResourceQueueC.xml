@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><component abstract="" loc="42:/opt/tinyos-2.1.2/tos/system/RoundRobinResourceQueueC.nc" nicename="tos.system.RoundRobinResourceQueueC" qname="RoundRobinResourceQueueC" safe="">
+      <parameters>
+        <constant loc="42:/opt/tinyos-2.1.2/tos/system/RoundRobinResourceQueueC.nc" name="size" ref="0x7f4ee6f4bb40">
+          <component-ref nicename="tos.system.RoundRobinResourceQueueC" qname="RoundRobinResourceQueueC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7f4ee870c160"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="44:/opt/tinyos-2.1.2/tos/system/RoundRobinResourceQueueC.nc" name="Init" provided="1" ref="0x7f4ee6f48410">
+      <component-ref nicename="tos.system.RoundRobinResourceQueueC" qname="RoundRobinResourceQueueC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x7f4ee6f48410" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7f4ee6f48790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/system/RoundRobinResourceQueueC.nc" name="RoundRobinQueue" provided="1" ref="0x7f4ee6f43a00">
+      <component-ref nicename="tos.system.RoundRobinResourceQueueC" qname="RoundRobinResourceQueueC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RoundRobinQueue" ref="0x7f4ee6f43a00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x7f4ee6f43d80" scoped=""/>
+        <function-ref name="isEmpty" ref="0x7f4ee6f47020" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x7f4ee6f471b0" scoped=""/>
+        <function-ref name="dequeue" ref="0x7f4ee6f47340" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

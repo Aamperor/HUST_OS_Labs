@@ -1,0 +1,14 @@
+digraph "tos.lib.power.SplitControlPowerManagerC" {
+  "SplitControlPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="PowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.PowerManagerP.html"];
+  n0x7f4ee6a65820 [shape=ellipse, style=filled, label="SplitControl", fontsize=12];
+  "SplitControlPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="PowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.PowerManagerP.html"];
+  n0x7f4ee6a614f0 [shape=ellipse, style=filled, label="PowerDownCleanup", fontsize=12];
+  "SplitControlPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="PowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.PowerManagerP.html"];
+  n0x7f4ee6a61b90 [shape=ellipse, style=filled, label="ResourceDefaultOwner", fontsize=12];
+  "SplitControlPowerManagerC.PowerManager" [fontsize=12, shape=box, style=dashed, label="PowerManagerP\n(PowerManager)", URL="../chtml/tos.lib.power.PowerManagerP.html"];
+  n0x7f4ee6a63920 [shape=ellipse, style=filled, label="ArbiterInfo", fontsize=12];
+  "SplitControlPowerManagerC.PowerManager" -> "n0x7f4ee6a65820" [label="SplitControl", URL="../ihtml/tos.interfaces.SplitControl.html", fontsize=10];
+  "SplitControlPowerManagerC.PowerManager" -> "n0x7f4ee6a614f0" [label="PowerDownCleanup", URL="../ihtml/tos.lib.power.PowerDownCleanup.html", fontsize=10];
+  "SplitControlPowerManagerC.PowerManager" -> "n0x7f4ee6a61b90" [label="ResourceDefaultOwner", URL="../ihtml/tos.interfaces.ResourceDefaultOwner.html", fontsize=10];
+  "SplitControlPowerManagerC.PowerManager" -> "n0x7f4ee6a63920" [label="ArbiterInfo", URL="../ihtml/tos.interfaces.ArbiterInfo.html", fontsize=10];
+}

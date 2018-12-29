@@ -1,2 +1,0 @@
-executable;oslab1;/home/wings/Projects/OSlabs/build/oslab1
-system;Linux;x86_64;GNU

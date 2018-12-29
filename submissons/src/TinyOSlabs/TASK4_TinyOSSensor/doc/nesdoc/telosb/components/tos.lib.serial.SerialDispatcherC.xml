@@ -1,0 +1,468 @@
+<?xml version="1.0" ?><component loc="47:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc" nicename="tos.lib.serial.SerialDispatcherC" qname="SerialDispatcherC">
+      <documentation loc="35:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+        <short>
+ This component provides functionality to send many different kinds
+ of serial packets on top of a general packet sending component.</short>
+        <long>
+ This component provides functionality to send many different kinds
+ of serial packets on top of a general packet sending component. It
+ achieves this by knowing where the different packets in a message_t
+ exist through the SerialPacketInfo interface.
+
+ @author Philip Levis
+ @author Ben Greenstein
+ @date August 7 2005
+
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="SplitControl" ref="0x7f4ee69732f0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x7f4ee69632f0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="Send" ref="0x7f4ee6972e10" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x7f4ee6834de0" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="Init" ref="0x7f4ee6976bc0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7f4ee6964c30" scoped=""/></to>
+        </wire>
+        <wire loc="65:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="Receive" ref="0x7f4ee6972320" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7f4ee68346c0" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="PacketInfo" ref="0x7f4ee6832c20" scoped=""/></from>
+          <to><interface-ref name="SerialPacketInfo" ref="0x7f4ee6970020" scoped=""/></to>
+        </wire>
+        <wire loc="70:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="Leds" ref="0x7f4ee695f8e0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x7f4ee6970940" scoped=""/></to>
+        </wire>
+        <wire loc="71:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="Leds" ref="0x7f4ee6830920" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x7f4ee6970940" scoped=""/></to>
+        </wire>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="Leds" ref="0x7f4ee6827cc0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x7f4ee6970940" scoped=""/></to>
+        </wire>
+        <wire loc="74:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="ReceiveBytePacket" ref="0x7f4ee6831590" scoped=""/></from>
+          <to><interface-ref name="ReceiveBytePacket" ref="0x7f4ee69585c0" scoped=""/></to>
+        </wire>
+        <wire loc="75:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="SendBytePacket" ref="0x7f4ee6831e80" scoped=""/></from>
+          <to><interface-ref name="SendBytePacket" ref="0x7f4ee695b130" scoped=""/></to>
+        </wire>
+        <wire loc="77:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="SerialFrameComm" ref="0x7f4ee69528e0" scoped=""/></from>
+          <to><interface-ref name="SerialFrameComm" ref="0x7f4ee682ce10" scoped=""/></to>
+        </wire>
+        <wire loc="78:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="SerialControl" ref="0x7f4ee6950060" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x7f4ee6802080" scoped=""/></to>
+        </wire>
+        <wire loc="80:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc">
+          <from><interface-ref name="UartStream" ref="0x7f4ee681ed20" scoped=""/></from>
+          <to><interface-ref name="UartStream" ref="0x7f4ee6802890" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="50:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc" name="SplitControl" provided="1" ref="0x7f4ee69732f0">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherC" qname="SerialDispatcherC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x7f4ee69732f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7f4ee6973670" scoped=""/>
+        <function-ref name="stopDone" ref="0x7f4ee6973800" scoped=""/>
+        <function-ref name="start" ref="0x7f4ee6973990" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee6973b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc" name="Send" provided="1" ref="0x7f4ee6972e10">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherC" qname="SerialDispatcherC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Send" ref="0x7f4ee6972e10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uart_id_t" ref="0x7f4ee77850d0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee69711c0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee6971350" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee69714e0" scoped=""/>
+        <function-ref name="cancel" ref="0x7f4ee6971670" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee6971800" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc" name="Init" provided="1" ref="0x7f4ee6976bc0">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherC" qname="SerialDispatcherC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x7f4ee6976bc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7f4ee6973020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc" name="Receive" provided="1" ref="0x7f4ee6972320">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherC" qname="SerialDispatcherC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x7f4ee6972320" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uart_id_t" ref="0x7f4ee77850d0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x7f4ee69726a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc" name="Leds" provided="0" ref="0x7f4ee6970940">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherC" qname="SerialDispatcherC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7f4ee6970940" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7f4ee6970cc0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7f4ee6970e50" scoped=""/>
+        <function-ref name="led1On" ref="0x7f4ee696f020" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7f4ee696f1b0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7f4ee696f340" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee696f4d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x7f4ee696f660" scoped=""/>
+        <function-ref name="led2Off" ref="0x7f4ee696fca0" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee696f7f0" scoped=""/>
+        <function-ref name="led0On" ref="0x7f4ee696f980" scoped=""/>
+        <function-ref name="led2On" ref="0x7f4ee696fb10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherC.nc" name="SerialPacketInfo" provided="0" ref="0x7f4ee6970020">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherC" qname="SerialDispatcherC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialPacketInfo" ref="0x7f4ee6970020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SerialPacketInfo" qname="SerialPacketInfo"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uart_id_t" ref="0x7f4ee77850d0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="upperLength" ref="0x7f4ee69703a0" scoped=""/>
+        <function-ref name="offset" ref="0x7f4ee6970530" scoped=""/>
+        <function-ref name="dataLinkLength" ref="0x7f4ee69706c0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="57:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherP.nc" name="Leds" provided="0" ref="0x7f4ee6830920">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherP" qname="SerialDispatcherC.SerialDispatcherP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7f4ee6830920" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7f4ee6830ca0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7f4ee6830e30" scoped=""/>
+        <function-ref name="led1On" ref="0x7f4ee682f020" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7f4ee682f1b0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7f4ee682f340" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee682f4d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x7f4ee682f660" scoped=""/>
+        <function-ref name="led2On" ref="0x7f4ee682fca0" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee682f980" scoped=""/>
+        <function-ref name="led2Off" ref="0x7f4ee682f7f0" scoped=""/>
+        <function-ref name="led0On" ref="0x7f4ee682fb10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherP.nc" name="ReceiveBytePacket" provided="0" ref="0x7f4ee6831590">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherP" qname="SerialDispatcherC.SerialDispatcherP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReceiveBytePacket" ref="0x7f4ee6831590" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.ReceiveBytePacket" qname="ReceiveBytePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startPacket" ref="0x7f4ee6831910" scoped=""/>
+        <function-ref name="byteReceived" ref="0x7f4ee6831aa0" scoped=""/>
+        <function-ref name="endPacket" ref="0x7f4ee6831c30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/opt/tinyos-2.1.2/tos/platforms/telosa/PlatformSerialC.nc" name="UartStream" provided="1" ref="0x7f4ee6802890">
+      <component-ref nicename="tos.platforms.telosa.PlatformSerialC" qname="PlatformSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UartStream" ref="0x7f4ee6802890" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.UartStream" qname="UartStream"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee6802c10" scoped=""/>
+        <function-ref name="receivedByte" ref="0x7f4ee6802da0" scoped=""/>
+        <function-ref name="receive" ref="0x7f4ee6801020" scoped=""/>
+        <function-ref name="enableReceiveInterrupt" ref="0x7f4ee68011b0" scoped=""/>
+        <function-ref name="receiveDone" ref="0x7f4ee6801340" scoped=""/>
+        <function-ref name="disableReceiveInterrupt" ref="0x7f4ee68014d0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee6801660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/lib/serial/HdlcTranslateC.nc" name="SerialFrameComm" provided="1" ref="0x7f4ee682ce10">
+      <component-ref nicename="tos.lib.serial.HdlcTranslateC" qname="HdlcTranslateC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialFrameComm" ref="0x7f4ee682ce10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SerialFrameComm" qname="SerialFrameComm"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putDelimiter" ref="0x7f4ee68291c0" scoped=""/>
+        <function-ref name="resetSend" ref="0x7f4ee6829350" scoped=""/>
+        <function-ref name="dataReceived" ref="0x7f4ee68294e0" scoped=""/>
+        <function-ref name="resetReceive" ref="0x7f4ee6829670" scoped=""/>
+        <function-ref name="putData" ref="0x7f4ee6829800" scoped=""/>
+        <function-ref name="putDone" ref="0x7f4ee6829990" scoped=""/>
+        <function-ref name="delimiterReceived" ref="0x7f4ee6829b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/lib/serial/HdlcTranslateC.nc" name="UartStream" provided="0" ref="0x7f4ee681ed20">
+      <component-ref nicename="tos.lib.serial.HdlcTranslateC" qname="HdlcTranslateC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UartStream" ref="0x7f4ee681ed20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.UartStream" qname="UartStream"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee68270e0" scoped=""/>
+        <function-ref name="receivedByte" ref="0x7f4ee6827270" scoped=""/>
+        <function-ref name="receive" ref="0x7f4ee6827400" scoped=""/>
+        <function-ref name="enableReceiveInterrupt" ref="0x7f4ee6827590" scoped=""/>
+        <function-ref name="receiveDone" ref="0x7f4ee6827720" scoped=""/>
+        <function-ref name="disableReceiveInterrupt" ref="0x7f4ee68278b0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee6827a40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherP.nc" name="Send" provided="1" ref="0x7f4ee6834de0">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherP" qname="SerialDispatcherC.SerialDispatcherP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Send" ref="0x7f4ee6834de0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uart_id_t" ref="0x7f4ee77850d0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee68321c0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee6832350" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee68324e0" scoped=""/>
+        <function-ref name="cancel" ref="0x7f4ee6832670" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee6832800" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SendBytePacket" provided="1" ref="0x7f4ee695b130">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SendBytePacket" ref="0x7f4ee695b130" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SendBytePacket" qname="SendBytePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="completeSend" ref="0x7f4ee695b4b0" scoped=""/>
+        <function-ref name="nextByte" ref="0x7f4ee695b640" scoped=""/>
+        <function-ref name="startSend" ref="0x7f4ee695b7d0" scoped=""/>
+        <function-ref name="sendCompleted" ref="0x7f4ee695b960" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SerialFrameComm" provided="0" ref="0x7f4ee69528e0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialFrameComm" ref="0x7f4ee69528e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SerialFrameComm" qname="SerialFrameComm"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putDelimiter" ref="0x7f4ee6952c60" scoped=""/>
+        <function-ref name="resetSend" ref="0x7f4ee6952df0" scoped=""/>
+        <function-ref name="dataReceived" ref="0x7f4ee695f020" scoped=""/>
+        <function-ref name="resetReceive" ref="0x7f4ee695f1b0" scoped=""/>
+        <function-ref name="putData" ref="0x7f4ee695f340" scoped=""/>
+        <function-ref name="putDone" ref="0x7f4ee695f4d0" scoped=""/>
+        <function-ref name="delimiterReceived" ref="0x7f4ee695f660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="ReceiveBytePacket" provided="1" ref="0x7f4ee69585c0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReceiveBytePacket" ref="0x7f4ee69585c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.ReceiveBytePacket" qname="ReceiveBytePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startPacket" ref="0x7f4ee6958940" scoped=""/>
+        <function-ref name="byteReceived" ref="0x7f4ee6958ad0" scoped=""/>
+        <function-ref name="endPacket" ref="0x7f4ee6958c60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherP.nc" name="SendBytePacket" provided="0" ref="0x7f4ee6831e80">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherP" qname="SerialDispatcherC.SerialDispatcherP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SendBytePacket" ref="0x7f4ee6831e80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SendBytePacket" qname="SendBytePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="completeSend" ref="0x7f4ee6830220" scoped=""/>
+        <function-ref name="nextByte" ref="0x7f4ee68303b0" scoped=""/>
+        <function-ref name="startSend" ref="0x7f4ee6830540" scoped=""/>
+        <function-ref name="sendCompleted" ref="0x7f4ee68306d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherP.nc" name="PacketInfo" provided="0" ref="0x7f4ee6832c20">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherP" qname="SerialDispatcherC.SerialDispatcherP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketInfo" ref="0x7f4ee6832c20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SerialPacketInfo" qname="SerialPacketInfo"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uart_id_t" ref="0x7f4ee77850d0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="upperLength" ref="0x7f4ee6831020" scoped=""/>
+        <function-ref name="offset" ref="0x7f4ee68311b0" scoped=""/>
+        <function-ref name="dataLinkLength" ref="0x7f4ee6831340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/lib/serial/HdlcTranslateC.nc" name="Leds" provided="0" ref="0x7f4ee6827cc0">
+      <component-ref nicename="tos.lib.serial.HdlcTranslateC" qname="HdlcTranslateC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7f4ee6827cc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7f4ee68260a0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7f4ee6826230" scoped=""/>
+        <function-ref name="led1On" ref="0x7f4ee68263c0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7f4ee6826550" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7f4ee68266e0" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee6826870" scoped=""/>
+        <function-ref name="led1Off" ref="0x7f4ee6826a00" scoped=""/>
+        <function-ref name="led2Off" ref="0x7f4ee681c1b0" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee6826b90" scoped=""/>
+        <function-ref name="led0On" ref="0x7f4ee6826d20" scoped=""/>
+        <function-ref name="led2On" ref="0x7f4ee681c020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="74:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SerialControl" provided="0" ref="0x7f4ee6950060">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialControl" ref="0x7f4ee6950060" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x7f4ee69503e0" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee6950570" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="Init" provided="1" ref="0x7f4ee6964c30">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x7f4ee6964c30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7f4ee6963020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:/opt/tinyos-2.1.2/tos/platforms/telosa/PlatformSerialC.nc" name="StdControl" provided="1" ref="0x7f4ee6802080">
+      <component-ref nicename="tos.platforms.telosa.PlatformSerialC" qname="PlatformSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x7f4ee6802080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x7f4ee6802400" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee6802590" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="66:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SplitControl" provided="1" ref="0x7f4ee69632f0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x7f4ee69632f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7f4ee6963670" scoped=""/>
+        <function-ref name="stopDone" ref="0x7f4ee6963800" scoped=""/>
+        <function-ref name="start" ref="0x7f4ee6963990" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee6963b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="73:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="Leds" provided="0" ref="0x7f4ee695f8e0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7f4ee695f8e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7f4ee695fc60" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7f4ee695fdf0" scoped=""/>
+        <function-ref name="led1On" ref="0x7f4ee6956020" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7f4ee69561b0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7f4ee6956340" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee69564d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x7f4ee6956660" scoped=""/>
+        <function-ref name="led2Off" ref="0x7f4ee6956ca0" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee69567f0" scoped=""/>
+        <function-ref name="led0On" ref="0x7f4ee6956980" scoped=""/>
+        <function-ref name="led2On" ref="0x7f4ee6956b10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherP.nc" name="Receive" provided="1" ref="0x7f4ee68346c0">
+      <component-ref nicename="tos.lib.serial.SerialDispatcherP" qname="SerialDispatcherC.SerialDispatcherP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x7f4ee68346c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uart_id_t" ref="0x7f4ee77850d0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x7f4ee6834a60" scoped=""/>
+      </interface-functions>
+    </interface><component loc="48(SerialDispatcherC.SerialDispatcherP):/opt/tinyos-2.1.2/tos/lib/serial/SerialDispatcherP.nc" nicename="tos.lib.serial.SerialDispatcherP" qname="SerialDispatcherC.SerialDispatcherP">
+      <documentation loc="71:/opt/tinyos-2.1.2/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.serial.SerialDispatcherP" qname="SerialDispatcherP"/>
+      </instance>
+      <module/>
+    </component><component loc="62:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" nicename="tos.lib.serial.SerialP" qname="SerialP">
+      <module/>
+    </component><component loc="47:/opt/tinyos-2.1.2/tos/lib/serial/HdlcTranslateC.nc" nicename="tos.lib.serial.HdlcTranslateC" qname="HdlcTranslateC">
+      <documentation loc="71:/opt/tinyos-2.1.2/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="2:/opt/tinyos-2.1.2/tos/platforms/telosa/PlatformSerialC.nc" nicename="tos.platforms.telosa.PlatformSerialC" qname="PlatformSerialC">
+      <configuration/>
+      <wiring>
+        <wire loc="14:/opt/tinyos-2.1.2/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="UartByte" ref="0x7f4ee67fcd50" scoped=""/></from>
+          <to><interface-ref name="UartByte" ref="0x7f4ee65f4060" scoped=""/></to>
+        </wire>
+        <wire loc="13:/opt/tinyos-2.1.2/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="UartStream" ref="0x7f4ee6802890" scoped=""/></from>
+          <to><interface-ref name="UartStream" ref="0x7f4ee65f50c0" scoped=""/></to>
+        </wire>
+        <wire loc="17:/opt/tinyos-2.1.2/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="StdControl" ref="0x7f4ee6802080" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x7f4ee65f27a0" scoped=""/></to>
+        </wire>
+        <wire loc="18:/opt/tinyos-2.1.2/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="Msp430UartConfigure" ref="0x7f4ee65f4800" scoped=""/></from>
+          <to><interface-ref name="Msp430UartConfigure" ref="0x7f4ee65ef080" scoped=""/></to>
+        </wire>
+        <wire loc="19:/opt/tinyos-2.1.2/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="Resource" ref="0x7f4ee65ef6f0" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x7f4ee65f7c00" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

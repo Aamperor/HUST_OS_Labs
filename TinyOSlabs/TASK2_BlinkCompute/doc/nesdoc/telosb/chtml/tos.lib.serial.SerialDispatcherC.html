@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: tos.lib.serial.SerialDispatcherC</title>
+  </head>
+  <body>
+    <h2>Component: tos.lib.serial.SerialDispatcherC
+    </h2>
+    <b>configuration SerialDispatcherC</b>
+    <p>
+ This component provides functionality to send many different kinds
+ of serial packets on top of a general packet sending component. It
+ achieves this by knowing where the different packets in a message_t
+ exist through the SerialPacketInfo interface.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Philip Levis
+ 
+      </dd>
+      <dd>
+        Ben Greenstein
+ 
+      </dd>
+      <dt><b>Date:</b>
+      <dd>
+        August 7 2005
+
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Init.html">Init</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Receive.html">Receive</a>[uart_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Send.html">Send</a>[uart_id_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.SplitControl.html">SplitControl</a></div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Leds.html">Leds</a></div><div id=funcsig>interface <a href="../ihtml/tos.lib.serial.SerialPacketInfo.html">SerialPacketInfo</a>[uart_id_t]</div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" id="node2" href="../chtml/tos.lib.serial.SerialP.html" title="SerialP" alt="" coords="378,227,450,275">
+
+      <area shape="poly" id="edge1" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="640,163,558,205,465,239,463,234,556,200,637,158">
+
+      <area shape="rect" id="edge1-label" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="586,188,656,203">
+
+      <area shape="poly" id="edge6" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="381,277,351,304,328,339,319,364,314,390,312,440,307,440,308,389,313,362,323,336,347,301,377,273">
+
+      <area shape="rect" id="edge6-label" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="325,354,352,369">
+
+      <area shape="rect" id="node9" href="../chtml/tos.lib.serial.HdlcTranslateC.html" title="HdlcTranslateC" alt="" coords="364,337,486,385">
+
+      <area shape="poly" id="edge11" href="../ihtml/tos.lib.serial.SerialFrameComm.html" title="SerialFrameComm" alt="" coords="416,275,417,313,419,323,413,324,412,314,411,275">
+
+      <area shape="rect" id="edge11-label" href="../ihtml/tos.lib.serial.SerialFrameComm.html" title="SerialFrameComm" alt="" coords="414,299,516,313">
+
+      <area shape="rect" id="node10" href="../chtml/tos.platforms.telosa.PlatformSerialC.html" title="PlatformSerialC" alt="" coords="380,448,513,507">
+
+      <area shape="poly" id="edge12" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="" coords="452,255,488,270,505,282,518,297,524,300,533,299,544,295,553,296,556,306,551,328,506,425,497,439,493,436,501,423,546,326,551,306,550,300,544,301,534,304,523,306,514,301,501,286,485,274,450,260">
+
+      <area shape="rect" id="edge12-label" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="" coords="544,354,605,369">
+
+      <area shape="rect" id="node4" href="../chtml/tos.lib.serial.SerialDispatcherP.html" title="SerialDispatcherP" alt="" coords="206,116,340,164">
+
+      <area shape="poly" id="edge2" href="../ihtml/tos.interfaces.Send.html" title="Send[uart_id_t]" alt="" coords="214,54,215,73,220,91,228,104,224,107,215,93,209,73,209,54">
+
+      <area shape="rect" id="edge2-label" href="../ihtml/tos.interfaces.Send.html" title="Send[uart_id_t]" alt="" coords="217,77,302,92">
+
+      <area shape="poly" id="edge9" href="../ihtml/tos.lib.serial.ReceiveBytePacket.html" title="ReceiveBytePacket" alt="" coords="342,157,366,170,387,186,405,212,400,215,383,190,363,174,340,162">
+
+      <area shape="rect" id="edge9-label" href="../ihtml/tos.lib.serial.ReceiveBytePacket.html" title="ReceiveBytePacket" alt="" coords="396,188,501,203">
+
+      <area shape="poly" id="edge10" href="../ihtml/tos.lib.serial.SendBytePacket.html" title="SendBytePacket" alt="" coords="277,164,282,183,293,201,308,215,326,226,366,240,364,245,324,230,305,219,288,204,277,185,272,165">
+
+      <area shape="rect" id="edge10-label" href="../ihtml/tos.lib.serial.SendBytePacket.html" title="SendBytePacket" alt="" coords="290,188,380,203">
+
+      <area shape="poly" id="edge5" href="../ihtml/tos.lib.serial.SerialPacketInfo.html" title="SerialPacketInfo[uart_id_t]" alt="" coords="206,151,133,166,104,177,86,190,80,200,78,213,73,212,75,199,82,186,101,172,132,161,205,146">
+
+      <area shape="rect" id="edge5-label" href="../ihtml/tos.lib.serial.SerialPacketInfo.html" title="SerialPacketInfo[uart_id_t]" alt="" coords="84,188,232,203">
+
+      <area shape="poly" id="edge7" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="277,164,280,202,291,313,306,424,309,440,304,441,301,424,286,314,274,203,272,165">
+
+      <area shape="rect" id="edge7-label" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="289,299,316,313">
+
+      <area shape="poly" id="edge3" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="546,165,537,185,523,205,495,225,465,239,462,235,492,221,519,201,532,183,541,163">
+
+      <area shape="rect" id="edge3-label" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="532,188,552,203">
+
+      <area shape="poly" id="edge4" href="../ihtml/tos.interfaces.Receive.html" title="Receive[uart_id_t]" alt="" coords="324,54,305,93,298,105,293,103,300,91,319,52">
+
+      <area shape="rect" id="edge4-label" href="../ihtml/tos.interfaces.Receive.html" title="Receive[uart_id_t]" alt="" coords="310,77,412,92">
+
+      <area shape="poly" id="edge8" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="404,387,345,449,341,445,400,384">
+
+      <area shape="rect" id="edge8-label" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="377,409,404,424">
+
+      <area shape="poly" id="edge13" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="432,385,441,434,436,435,427,386">
+
+      <area shape="rect" id="edge13-label" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="437,409,498,424">
+
+    </map>
+    <img src="tos.lib.serial.SerialDispatcherC.png" usemap="#comp" id=imgwiring>
+  </body>
+</html>

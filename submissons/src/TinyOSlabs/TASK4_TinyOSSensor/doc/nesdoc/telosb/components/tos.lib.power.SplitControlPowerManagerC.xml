@@ -1,0 +1,173 @@
+<?xml version="1.0" ?><component abstract="" loc="67:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" nicename="tos.lib.power.SplitControlPowerManagerC" qname="SplitControlPowerManagerC">
+      <documentation loc="41:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component povides a power management policy for managing the power
+ states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component povides a power management policy for managing the power
+ states of non-virtualized devices.  Non-virtualized devices are shared
+ using a parameterized Resource interface, and are powered down according
+ to some policy whenever there are no more pending requests to that Resource.
+ The policy implemented by this component is to delay the power down of a
+ device by some contant factor.  Such a policy is useful whenever a device
+ has a long wake-up latency.  The cost of waiting for the device to power
+ up can be avoided if the device is requested again before some predetermined
+ amount of time.&lt;br&gt;&lt;br&gt;
+
+ Powerdown of the device is done through the &lt;code&gt;SplitControl&lt;/code&gt;
+ interface, so this component can only be used with those devices that
+ provide that interface.&lt;br&gt;&lt;br&gt;
+
+ For devices providing either the &lt;code&gt;AsyncStdControl&lt;/code&gt; or
+ &lt;code&gt;StdControl&lt;/code&gt; interfaces, please use either the
+ &lt;code&gt;AsyncStdControlPowerManagerC&lt;/code&gt; component or the
+ &lt;code&gt;StdControlPowerManagerC&lt;/code&gt; component respectively.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="79:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc">
+          <from><interface-ref name="SplitControl" ref="0x7f4ee6a3fba0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x7f4ee6a65820" scoped=""/></to>
+        </wire>
+        <wire loc="81:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc">
+          <from><interface-ref name="PowerDownCleanup" ref="0x7f4ee6a3e720" scoped=""/></from>
+          <to><interface-ref name="PowerDownCleanup" ref="0x7f4ee6a614f0" scoped=""/></to>
+        </wire>
+        <wire loc="83:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x7f4ee6a3ecf0" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x7f4ee6a61b90" scoped=""/></to>
+        </wire>
+        <wire loc="84:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x7f4ee6a3c930" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x7f4ee6a63920" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="69:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" name="SplitControl" provided="0" ref="0x7f4ee6a65820">
+      <component-ref nicename="tos.lib.power.SplitControlPowerManagerC" qname="SplitControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x7f4ee6a65820" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7f4ee6a65ba0" scoped=""/>
+        <function-ref name="stopDone" ref="0x7f4ee6a65d30" scoped=""/>
+        <function-ref name="start" ref="0x7f4ee6a64020" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee6a641b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="71:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" name="PowerDownCleanup" provided="0" ref="0x7f4ee6a614f0">
+      <component-ref nicename="tos.lib.power.SplitControlPowerManagerC" qname="SplitControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PowerDownCleanup" ref="0x7f4ee6a614f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.power.PowerDownCleanup" qname="PowerDownCleanup"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="cleanup" ref="0x7f4ee6a61870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" name="ResourceDefaultOwner" provided="0" ref="0x7f4ee6a61b90">
+      <component-ref nicename="tos.lib.power.SplitControlPowerManagerC" qname="SplitControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x7f4ee6a61b90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x7f4ee6a63020" scoped=""/>
+        <function-ref name="requested" ref="0x7f4ee6a631b0" scoped=""/>
+        <function-ref name="granted" ref="0x7f4ee6a63340" scoped=""/>
+        <function-ref name="isOwner" ref="0x7f4ee6a634d0" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x7f4ee6a63660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="73:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" name="ArbiterInfo" provided="0" ref="0x7f4ee6a63920">
+      <component-ref nicename="tos.lib.power.SplitControlPowerManagerC" qname="SplitControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x7f4ee6a63920" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x7f4ee6a63ca0" scoped=""/>
+        <function-ref name="userId" ref="0x7f4ee6a63e30" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="64:/opt/tinyos-2.1.2/tos/lib/power/PowerManagerP.nc" name="ResourceDefaultOwner" provided="0" ref="0x7f4ee6a3ecf0">
+      <component-ref nicename="tos.lib.power.PowerManagerP" qname="SplitControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x7f4ee6a3ecf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x7f4ee6a3c0a0" scoped=""/>
+        <function-ref name="requested" ref="0x7f4ee6a3c230" scoped=""/>
+        <function-ref name="granted" ref="0x7f4ee6a3c3c0" scoped=""/>
+        <function-ref name="isOwner" ref="0x7f4ee6a3c550" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x7f4ee6a3c6e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/opt/tinyos-2.1.2/tos/lib/power/PowerManagerP.nc" name="ArbiterInfo" provided="0" ref="0x7f4ee6a3c930">
+      <component-ref nicename="tos.lib.power.PowerManagerP" qname="SplitControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x7f4ee6a3c930" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x7f4ee6a3ccb0" scoped=""/>
+        <function-ref name="userId" ref="0x7f4ee6a3ce40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/opt/tinyos-2.1.2/tos/lib/power/PowerManagerP.nc" name="PowerDownCleanup" provided="0" ref="0x7f4ee6a3e720">
+      <component-ref nicename="tos.lib.power.PowerManagerP" qname="SplitControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PowerDownCleanup" ref="0x7f4ee6a3e720" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.power.PowerDownCleanup" qname="PowerDownCleanup"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="cleanup" ref="0x7f4ee6a3eaa0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/opt/tinyos-2.1.2/tos/lib/power/PowerManagerP.nc" name="SplitControl" provided="0" ref="0x7f4ee6a3fba0">
+      <component-ref nicename="tos.lib.power.PowerManagerP" qname="SplitControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x7f4ee6a3fba0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7f4ee6a3e020" scoped=""/>
+        <function-ref name="stopDone" ref="0x7f4ee6a3e1b0" scoped=""/>
+        <function-ref name="start" ref="0x7f4ee6a3e340" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee6a3e4d0" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="58(SplitControlPowerManagerC.PowerManager):/opt/tinyos-2.1.2/tos/lib/power/PowerManagerP.nc" nicename="tos.lib.power.PowerManagerP" qname="SplitControlPowerManagerC.PowerManager">
+      <documentation loc="41:/opt/tinyos-2.1.2/tos/lib/power/PowerManagerP.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.
+ Non-virtualized devices are shared using a parameterized Resource
+ interface, and are powered down according to some policy whenever there
+ are no more pending requests to that Resource.  The policy implemented
+ by this component is to power down a device as soon as it becomes free.
+ Such a policy is useful whenever a device has a negligible wake-up
+ latency.  There is no cost associated with waiting for the device to
+ power up, so it can be powered on and off as often as possible.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.lib.power.PowerManagerP" qname="PowerManagerP"/>
+      </instance>
+      <module/>
+    </component></referenced></component>

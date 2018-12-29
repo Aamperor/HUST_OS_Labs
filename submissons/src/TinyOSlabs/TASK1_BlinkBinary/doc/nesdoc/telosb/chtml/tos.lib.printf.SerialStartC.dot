@@ -1,0 +1,8 @@
+digraph "tos.lib.printf.SerialStartC" {
+  "SerialStartP" [fontsize=12, shape=box, URL="../chtml/tos.lib.printf.SerialStartP.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "SerialStartP" [fontsize=12, shape=box, URL="../chtml/tos.lib.printf.SerialStartP.html"];
+  "SerialActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialActiveMessageC.html"];
+  "SerialStartP" -> "MainC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "SerialStartP" -> "SerialActiveMessageC" [label="SplitControl", URL="../ihtml/tos.interfaces.SplitControl.html", fontsize=10];
+}

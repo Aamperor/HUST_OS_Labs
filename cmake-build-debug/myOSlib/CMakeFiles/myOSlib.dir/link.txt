@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmyOSlib.a  CMakeFiles/myOSlib.dir/myOSlib_Sem.c.o
-/usr/bin/ranlib libmyOSlib.a

@@ -1,0 +1,141 @@
+<?xml version="1.0" ?><component loc="62:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" nicename="tos.lib.serial.SerialP" qname="SerialP">
+      <module/>
+    <specification><interface loc="66:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SplitControl" provided="1" ref="0x7fcf8fb312f0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x7fcf8fb312f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7fcf8fb31670" scoped=""/>
+        <function-ref name="stopDone" ref="0x7fcf8fb31800" scoped=""/>
+        <function-ref name="start" ref="0x7fcf8fb31990" scoped=""/>
+        <function-ref name="stop" ref="0x7fcf8fb31b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="332:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="stopDoneTask" provided="0" ref="0x7fcf8faca6e0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="stopDoneTask" ref="0x7fcf8faca6e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7fcf8facaa60" scoped=""/>
+        <function-ref name="runTask" ref="0x7fcf8facabf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="74:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SerialControl" provided="0" ref="0x7fcf8fb1d8a0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialControl" ref="0x7fcf8fb1d8a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x7fcf8fb1dc20" scoped=""/>
+        <function-ref name="stop" ref="0x7fcf8fb1ddb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="191:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="RunTx" provided="0" ref="0x7fcf8fb014f0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RunTx" ref="0x7fcf8fb014f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7fcf8fb01870" scoped=""/>
+        <function-ref name="runTask" ref="0x7fcf8fb01a00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="Init" provided="1" ref="0x7fcf8fb33c30">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x7fcf8fb33c30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7fcf8fb31020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="75:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SerialFlush" provided="0" ref="0x7fcf8fb1b4e0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialFlush" ref="0x7fcf8fb1b4e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SerialFlush" qname="SerialFlush"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="flushDone" ref="0x7fcf8fb1b860" scoped=""/>
+        <function-ref name="flush" ref="0x7fcf8fb1b9f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="322:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="startDoneTask" provided="0" ref="0x7fcf8facec70">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="startDoneTask" ref="0x7fcf8facec70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7fcf8facc020" scoped=""/>
+        <function-ref name="runTask" ref="0x7fcf8facc1b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SerialFrameComm" provided="0" ref="0x7fcf8fb218e0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialFrameComm" ref="0x7fcf8fb218e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SerialFrameComm" qname="SerialFrameComm"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putDelimiter" ref="0x7fcf8fb21c60" scoped=""/>
+        <function-ref name="resetSend" ref="0x7fcf8fb21df0" scoped=""/>
+        <function-ref name="dataReceived" ref="0x7fcf8fb2e020" scoped=""/>
+        <function-ref name="resetReceive" ref="0x7fcf8fb2e1b0" scoped=""/>
+        <function-ref name="putData" ref="0x7fcf8fb2e340" scoped=""/>
+        <function-ref name="putDone" ref="0x7fcf8fb2e4d0" scoped=""/>
+        <function-ref name="delimiterReceived" ref="0x7fcf8fb2e660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="73:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="Leds" provided="0" ref="0x7fcf8fb2e8e0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7fcf8fb2e8e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7fcf8fb2ec60" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7fcf8fb2edf0" scoped=""/>
+        <function-ref name="led1On" ref="0x7fcf8fb26020" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7fcf8fb261b0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7fcf8fb26340" scoped=""/>
+        <function-ref name="get" ref="0x7fcf8fb264d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x7fcf8fb26660" scoped=""/>
+        <function-ref name="led2Off" ref="0x7fcf8fb26ca0" scoped=""/>
+        <function-ref name="set" ref="0x7fcf8fb267f0" scoped=""/>
+        <function-ref name="led0On" ref="0x7fcf8fb26980" scoped=""/>
+        <function-ref name="led2On" ref="0x7fcf8fb26b10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="341:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="defaultSerialFlushTask" provided="0" ref="0x7fcf8fac7a00">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="defaultSerialFlushTask" ref="0x7fcf8fac7a00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x7fcf8fac7d80" scoped=""/>
+        <function-ref name="runTask" ref="0x7fcf8fac5020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="SendBytePacket" provided="1" ref="0x7fcf8fb2b130">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SendBytePacket" ref="0x7fcf8fb2b130" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.SendBytePacket" qname="SendBytePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="completeSend" ref="0x7fcf8fb2b4b0" scoped=""/>
+        <function-ref name="nextByte" ref="0x7fcf8fb2b640" scoped=""/>
+        <function-ref name="startSend" ref="0x7fcf8fb2b7d0" scoped=""/>
+        <function-ref name="sendCompleted" ref="0x7fcf8fb2b960" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/opt/tinyos-2.1.2/tos/lib/serial/SerialP.nc" name="ReceiveBytePacket" provided="1" ref="0x7fcf8fb275c0">
+      <component-ref nicename="tos.lib.serial.SerialP" qname="SerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReceiveBytePacket" ref="0x7fcf8fb275c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.serial.ReceiveBytePacket" qname="ReceiveBytePacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startPacket" ref="0x7fcf8fb27940" scoped=""/>
+        <function-ref name="byteReceived" ref="0x7fcf8fb27ad0" scoped=""/>
+        <function-ref name="endPacket" ref="0x7fcf8fb27c60" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

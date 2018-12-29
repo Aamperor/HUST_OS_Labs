@@ -1,2 +1,0 @@
-executable;oslab1;$<TARGET_FILE:oslab1>
-system;Linux;x86_64;GNU

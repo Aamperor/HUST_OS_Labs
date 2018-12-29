@@ -1,1 +1,32 @@
-CMake executable not found Configure
+/home/wings/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.3684.76/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wings/OneDrive/Labs/Back/OSlabs/OSlab3
+-- The C compiler identification is GNU 8.2.0
+-- The CXX compiler identification is GNU 8.2.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+CMake Error at CMakeLists.txt:20 (target_link_libraries):
+  Cannot specify link libraries for target "oslab3_testcache.c" which is not
+  built by this project.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/wings/OneDrive/Labs/Back/OSlabs/OSlab3/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/wings/OneDrive/Labs/Back/OSlabs/OSlab3/cmake-build-debug/CMakeFiles/CMakeError.log".

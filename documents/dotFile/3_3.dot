@@ -1,0 +1,61 @@
+digraph 3.3
+{
+    subgraph cluster
+    {
+            label=mainPorcess
+            start [shape=Mdiamond];
+            end [shape=Mdiamond];
+            node [shape="record"];
+            start
+            ->打开读写文件，赋值读写文件指针
+            ->创建共享内存组
+            ->创建信号量并初始化
+            ->共享内存位标志位初始化
+            ->"调用fork()产生process1(writebuf_process)"
+            ->"调用fork()产生process2(readbuf_process)"        
+            ->"等待process1,process2结束"
+            ->释放信号量
+            ->输出拷贝过程结束
+            ->end
+    }
+    subgraph cluster1
+    {
+        label=writebuf_process
+        start1[label="start" shape=Mdiamond];
+        end1[label="end" shape=Mdiamond];
+        "文件内容读取完?"[shape=diamond]
+        P空信号量1[label="P满信号量"]
+        V空信号量1[label="V空信号量"]
+        node [shape="record"];
+        start1
+        ->获取共享缓冲区地址
+        ->"文件内容读取完?";
+        "文件内容读取完?"->P空信号量1[label="Y"];
+        P满信号量1->写完成标志位
+        写完成标志位->V空信号量1
+        V空信号量1->end1
+        "文件内容读取完?"->P满信号量[label="N"]
+        P满信号量->缓冲区写移位
+        ->写缓冲区
+        ->V空信号量
+        ->"文件内容读取完?"
+    }
+    subgraph cluster2
+    {
+        label=readbuf_process
+        node [shape="record"];
+        start2[label="start" shape=Mdiamond];
+        end2[label="end" shape=Mdiamond];
+        读缓冲区写文件1[label="读缓冲区写文件" ];
+        node [shape="record"];
+        "缓冲区标志位是否完成？"[shape=diamond]
+        start2->P满信号量2
+        
+        ->"缓冲区标志位是否完成？";
+        "缓冲区标志位是否完成？"->读缓冲区写文件[label="Y"];
+        读缓冲区写文件->V控心里
+        ->end2;
+        "缓冲区标志位是否完成？"->读缓冲区写文件1[label="N"];
+        读缓冲区写文件1->移动读取标志位
+    }
+}

@@ -1,0 +1,157 @@
+<?xml version="1.0" ?><component loc="13:SenseC.nc" nicename="SenseC" qname="SenseC">
+      <module/>
+    <specification><interface loc="21:SenseC.nc" name="readHumidity" provided="0" ref="0x7f4ee77cdc90">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="readHumidity" ref="0x7f4ee77cdc90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee77cc8a0" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee77ccd20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:SenseC.nc" name="Boot" provided="0" ref="0x7f4ee77e75c0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x7f4ee77e75c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x7f4ee77e7940" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:SenseC.nc" name="Packet" provided="0" ref="0x7f4ee776c7a0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x7f4ee776c7a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f4ee776cb20" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7f4ee776ccb0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee776ce40" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee77c5020" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7f4ee77c51b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:SenseC.nc" name="readTemp" provided="0" ref="0x7f4ee77c9330">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="readTemp" ref="0x7f4ee77c9330" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee77cd020" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee77cd4a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:SenseC.nc" name="AMSend" provided="0" ref="0x7f4ee77526b0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x7f4ee77526b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee7752a30" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee7752bc0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee7752d50" scoped=""/>
+        <function-ref name="cancel" ref="0x7f4ee775c020" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee775c1b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:SenseC.nc" name="readPhoto" provided="0" ref="0x7f4ee77c8510">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="readPhoto" ref="0x7f4ee77c8510" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee77c6130" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee77c65b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:SenseC.nc" name="Leds" provided="0" ref="0x7f4ee77dd9a0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7f4ee77dd9a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7f4ee77ddd20" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7f4ee77e9020" scoped=""/>
+        <function-ref name="led1On" ref="0x7f4ee77e91b0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7f4ee77e9340" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7f4ee77e94d0" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee77e9660" scoped=""/>
+        <function-ref name="led1Off" ref="0x7f4ee77e97f0" scoped=""/>
+        <function-ref name="led2Off" ref="0x7f4ee77e9e30" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee77e9980" scoped=""/>
+        <function-ref name="led0On" ref="0x7f4ee77e9b10" scoped=""/>
+        <function-ref name="led2On" ref="0x7f4ee77e9ca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:SenseC.nc" name="Control" provided="0" ref="0x7f4ee774e790">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f4ee774e790" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7f4ee774eb10" scoped=""/>
+        <function-ref name="stopDone" ref="0x7f4ee774eca0" scoped=""/>
+        <function-ref name="start" ref="0x7f4ee774ee30" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee775b020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:SenseC.nc" name="AMPacket" provided="0" ref="0x7f4ee775d7e0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x7f4ee775d7e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7f4ee775db60" scoped=""/>
+        <function-ref name="source" ref="0x7f4ee775dcf0" scoped=""/>
+        <function-ref name="address" ref="0x7f4ee775de80" scoped=""/>
+        <function-ref name="destination" ref="0x7f4ee77c4030" scoped=""/>
+        <function-ref name="setSource" ref="0x7f4ee77c41c0" scoped=""/>
+        <function-ref name="setDestination" ref="0x7f4ee77c4350" scoped=""/>
+        <function-ref name="type" ref="0x7f4ee77c44e0" scoped=""/>
+        <function-ref name="setType" ref="0x7f4ee77c4670" scoped=""/>
+        <function-ref name="isForMe" ref="0x7f4ee77c4800" scoped=""/>
+        <function-ref name="setGroup" ref="0x7f4ee77c4990" scoped=""/>
+        <function-ref name="localGroup" ref="0x7f4ee77c4b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:SenseC.nc" name="Timer" provided="0" ref="0x7f4ee77d2da0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f4ee77d2da0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x7f4ee77f1160"/>
+            <typename><typedef-ref name="TMilli" ref="0x7f4ee77f18d0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x7f4ee77cf390" scoped=""/>
+        <function-ref name="fired" ref="0x7f4ee77da970" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x7f4ee77d0720" scoped=""/>
+        <function-ref name="isOneShot" ref="0x7f4ee77d02a0" scoped=""/>
+        <function-ref name="getdt" ref="0x7f4ee77cfc90" scoped=""/>
+        <function-ref name="gett0" ref="0x7f4ee77cf810" scoped=""/>
+        <function-ref name="isRunning" ref="0x7f4ee77dadf0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x7f4ee77db9d0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x7f4ee77d0d30" scoped=""/>
+        <function-ref name="startOneShot" ref="0x7f4ee77da020" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee77da4f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

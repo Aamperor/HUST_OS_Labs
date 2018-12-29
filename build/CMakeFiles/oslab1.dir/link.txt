@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/oslab1.dir/oslab1.c.o  -o oslab1 

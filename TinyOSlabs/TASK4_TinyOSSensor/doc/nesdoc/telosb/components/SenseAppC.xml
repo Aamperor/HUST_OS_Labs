@@ -1,0 +1,662 @@
+<?xml version="1.0" ?><component loc="10:SenseAppC.nc" nicename="SenseAppC" qname="SenseAppC">
+      <configuration/>
+      <wiring>
+        <wire loc="24:SenseAppC.nc">
+          <from><interface-ref name="Boot" ref="0x7f4ee77e75c0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7f4ee772f3f0" scoped=""/></to>
+        </wire>
+        <wire loc="25:SenseAppC.nc">
+          <from><interface-ref name="Leds" ref="0x7f4ee77dd9a0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x7f4ee772c5a0" scoped=""/></to>
+        </wire>
+        <wire loc="26:SenseAppC.nc">
+          <from><interface-ref name="Timer" ref="0x7f4ee77d2da0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f4ee713c370" scoped=""/></to>
+        </wire>
+        <wire loc="27:SenseAppC.nc">
+          <from><interface-ref name="readTemp" ref="0x7f4ee77c9330" scoped=""/></from>
+          <to><interface-ref name="Temperature" ref="0x7f4ee6a19310" scoped=""/></to>
+        </wire>
+        <wire loc="28:SenseAppC.nc">
+          <from><interface-ref name="readHumidity" ref="0x7f4ee77cdc90" scoped=""/></from>
+          <to><interface-ref name="Humidity" ref="0x7f4ee6a16240" scoped=""/></to>
+        </wire>
+        <wire loc="29:SenseAppC.nc">
+          <from><interface-ref name="readPhoto" ref="0x7f4ee77c8510" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x7f4ee6a12bc0" scoped=""/></to>
+        </wire>
+        <wire loc="30:SenseAppC.nc">
+          <from><interface-ref name="Packet" ref="0x7f4ee776c7a0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7f4ee69e8630" scoped=""/></to>
+        </wire>
+        <wire loc="31:SenseAppC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7f4ee775d7e0" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7f4ee69e72d0" scoped=""/></to>
+        </wire>
+        <wire loc="32:SenseAppC.nc">
+          <from><interface-ref name="Control" ref="0x7f4ee774e790" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x7f4ee69ec250" scoped=""/></to>
+        </wire>
+        <wire loc="33:SenseAppC.nc">
+          <from><interface-ref name="AMSend" ref="0x7f4ee77526b0" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x7f4ee69ea280" scoped=""/>
+          <arguments>
+            <value cst="I:137">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="46:/opt/tinyos-2.1.2/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x7f4ee772c5a0">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7f4ee772c5a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7f4ee772c920" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7f4ee772cab0" scoped=""/>
+        <function-ref name="led1On" ref="0x7f4ee772cc40" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7f4ee772cdd0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7f4ee7553020" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee75531b0" scoped=""/>
+        <function-ref name="led1Off" ref="0x7f4ee7553340" scoped=""/>
+        <function-ref name="led2Off" ref="0x7f4ee7553980" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee75534d0" scoped=""/>
+        <function-ref name="led0On" ref="0x7f4ee7553660" scoped=""/>
+        <function-ref name="led2On" ref="0x7f4ee75537f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:SenseC.nc" name="AMSend" provided="0" ref="0x7f4ee77526b0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x7f4ee77526b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee7752a30" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee7752bc0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee7752d50" scoped=""/>
+        <function-ref name="cancel" ref="0x7f4ee775c020" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee775c1b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc" name="AMPacket" provided="1" ref="0x7f4ee69e72d0">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x7f4ee69e72d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7f4ee69e7650" scoped=""/>
+        <function-ref name="source" ref="0x7f4ee69e77e0" scoped=""/>
+        <function-ref name="address" ref="0x7f4ee69e7970" scoped=""/>
+        <function-ref name="destination" ref="0x7f4ee69e7b00" scoped=""/>
+        <function-ref name="setSource" ref="0x7f4ee69e7c90" scoped=""/>
+        <function-ref name="setDestination" ref="0x7f4ee69e7e20" scoped=""/>
+        <function-ref name="type" ref="0x7f4ee69e5020" scoped=""/>
+        <function-ref name="setType" ref="0x7f4ee69e51b0" scoped=""/>
+        <function-ref name="isForMe" ref="0x7f4ee69e5340" scoped=""/>
+        <function-ref name="setGroup" ref="0x7f4ee69e54d0" scoped=""/>
+        <function-ref name="localGroup" ref="0x7f4ee69e5660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:SenseC.nc" name="Control" provided="0" ref="0x7f4ee774e790">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f4ee774e790" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7f4ee774eb10" scoped=""/>
+        <function-ref name="stopDone" ref="0x7f4ee774eca0" scoped=""/>
+        <function-ref name="start" ref="0x7f4ee774ee30" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee775b020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:SenseC.nc" name="Leds" provided="0" ref="0x7f4ee77dd9a0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x7f4ee77dd9a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x7f4ee77ddd20" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x7f4ee77e9020" scoped=""/>
+        <function-ref name="led1On" ref="0x7f4ee77e91b0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x7f4ee77e9340" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x7f4ee77e94d0" scoped=""/>
+        <function-ref name="get" ref="0x7f4ee77e9660" scoped=""/>
+        <function-ref name="led1Off" ref="0x7f4ee77e97f0" scoped=""/>
+        <function-ref name="led2Off" ref="0x7f4ee77e9e30" scoped=""/>
+        <function-ref name="set" ref="0x7f4ee77e9980" scoped=""/>
+        <function-ref name="led0On" ref="0x7f4ee77e9b10" scoped=""/>
+        <function-ref name="led2On" ref="0x7f4ee77e9ca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc" name="Packet" provided="1" ref="0x7f4ee69e8630">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x7f4ee69e8630" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f4ee69e89b0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7f4ee69e8b40" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee69e8cd0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee69e8e60" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7f4ee69e7020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:SenseC.nc" name="Packet" provided="0" ref="0x7f4ee776c7a0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x7f4ee776c7a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f4ee776cb20" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7f4ee776ccb0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee776ce40" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee77c5020" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7f4ee77c51b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc" name="Humidity" provided="1" ref="0x7f4ee6a16240">
+      <component-ref nicename="tos.platforms.telosa.chips.sht11.SensirionSht11C" qname="SenseAppC.SensirionSht11C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Humidity" ref="0x7f4ee6a16240" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee6a16e30" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee6a15300" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:SenseC.nc" name="Timer" provided="0" ref="0x7f4ee77d2da0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f4ee77d2da0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x7f4ee77f1160"/>
+            <typename><typedef-ref name="TMilli" ref="0x7f4ee77f18d0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x7f4ee77cf390" scoped=""/>
+        <function-ref name="fired" ref="0x7f4ee77da970" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x7f4ee77d0720" scoped=""/>
+        <function-ref name="isOneShot" ref="0x7f4ee77d02a0" scoped=""/>
+        <function-ref name="getdt" ref="0x7f4ee77cfc90" scoped=""/>
+        <function-ref name="gett0" ref="0x7f4ee77cf810" scoped=""/>
+        <function-ref name="isRunning" ref="0x7f4ee77dadf0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x7f4ee77db9d0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x7f4ee77d0d30" scoped=""/>
+        <function-ref name="startOneShot" ref="0x7f4ee77da020" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee77da4f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc" name="AMSend" provided="1" ref="0x7f4ee69ea280">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x7f4ee69ea280" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7f4ee7787550"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee69ea600" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee69ea790" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee69ea920" scoped=""/>
+        <function-ref name="cancel" ref="0x7f4ee69eaab0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee69eac40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x7f4ee713c370">
+      <component-ref nicename="tos.system.TimerMilliC" qname="SenseAppC.TimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f4ee713c370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x7f4ee77f1160"/>
+            <typename><typedef-ref name="TMilli" ref="0x7f4ee77f18d0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x7f4ee7139870" scoped=""/>
+        <function-ref name="fired" ref="0x7f4ee713be40" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x7f4ee713ac00" scoped=""/>
+        <function-ref name="isOneShot" ref="0x7f4ee713a780" scoped=""/>
+        <function-ref name="getdt" ref="0x7f4ee71371e0" scoped=""/>
+        <function-ref name="gett0" ref="0x7f4ee7139cf0" scoped=""/>
+        <function-ref name="isRunning" ref="0x7f4ee713a300" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x7f4ee713b020" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x7f4ee7139260" scoped=""/>
+        <function-ref name="startOneShot" ref="0x7f4ee713b4f0" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee713b9c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc" name="Temperature" provided="1" ref="0x7f4ee6a19310">
+      <component-ref nicename="tos.platforms.telosa.chips.sht11.SensirionSht11C" qname="SenseAppC.SensirionSht11C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Temperature" ref="0x7f4ee6a19310" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee6a18020" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee6a184a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc" name="Read" provided="1" ref="0x7f4ee6a12bc0">
+      <component-ref nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParC" qname="SenseAppC.HamamatsuS1087ParC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x7f4ee6a12bc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee69f37e0" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee69f3c60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:SenseC.nc" name="readTemp" provided="0" ref="0x7f4ee77c9330">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="readTemp" ref="0x7f4ee77c9330" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee77cd020" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee77cd4a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:SenseC.nc" name="AMPacket" provided="0" ref="0x7f4ee775d7e0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x7f4ee775d7e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7f4ee775db60" scoped=""/>
+        <function-ref name="source" ref="0x7f4ee775dcf0" scoped=""/>
+        <function-ref name="address" ref="0x7f4ee775de80" scoped=""/>
+        <function-ref name="destination" ref="0x7f4ee77c4030" scoped=""/>
+        <function-ref name="setSource" ref="0x7f4ee77c41c0" scoped=""/>
+        <function-ref name="setDestination" ref="0x7f4ee77c4350" scoped=""/>
+        <function-ref name="type" ref="0x7f4ee77c44e0" scoped=""/>
+        <function-ref name="setType" ref="0x7f4ee77c4670" scoped=""/>
+        <function-ref name="isForMe" ref="0x7f4ee77c4800" scoped=""/>
+        <function-ref name="setGroup" ref="0x7f4ee77c4990" scoped=""/>
+        <function-ref name="localGroup" ref="0x7f4ee77c4b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:SenseC.nc" name="Boot" provided="0" ref="0x7f4ee77e75c0">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x7f4ee77e75c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x7f4ee77e7940" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc" name="SplitControl" provided="1" ref="0x7f4ee69ec250">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x7f4ee69ec250" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x7f4ee69ec5d0" scoped=""/>
+        <function-ref name="stopDone" ref="0x7f4ee69ec760" scoped=""/>
+        <function-ref name="start" ref="0x7f4ee69ec8f0" scoped=""/>
+        <function-ref name="stop" ref="0x7f4ee69eca80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:SenseC.nc" name="readPhoto" provided="0" ref="0x7f4ee77c8510">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="readPhoto" ref="0x7f4ee77c8510" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee77c6130" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee77c65b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/opt/tinyos-2.1.2/tos/system/MainC.nc" name="Boot" provided="1" ref="0x7f4ee772f3f0">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x7f4ee772f3f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x7f4ee772f770" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:SenseC.nc" name="readHumidity" provided="0" ref="0x7f4ee77cdc90">
+      <component-ref nicename="SenseC" qname="SenseC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="readHumidity" ref="0x7f4ee77cdc90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee77cc8a0" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee77ccd20" scoped=""/>
+      </interface-functions>
+    </interface><component loc="40(SenseAppC.HamamatsuS1087ParC):/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc" nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParC" qname="SenseAppC.HamamatsuS1087ParC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+        <short>
+ HamamatsuS1087ParC is a driver for a photosynthetically-active
+ radiation sensor available on the telosb platform.</short>
+        <long>
+ HamamatsuS1087ParC is a driver for a photosynthetically-active
+ radiation sensor available on the telosb platform. 
+
+ @author Gilman Tolle &lt;gtolle@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2007-04-13 21:46:18 $
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParC" qname="HamamatsuS1087ParC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="Read" ref="0x7f4ee6a12bc0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x7f4ee5e37760" scoped=""/></to>
+        </wire>
+        <wire loc="50:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="ReadStream" ref="0x7f4ee69f2370" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x7f4ee5e32380" scoped=""/></to>
+        </wire>
+        <wire loc="53:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="DeviceMetadata" ref="0x7f4ee6a12490" scoped=""/></from>
+          <to><interface-ref name="DeviceMetadata" ref="0x7f4ee69fb170" scoped=""/></to>
+        </wire>
+        <wire loc="54:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="AdcConfigure" ref="0x7f4ee5e34020" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x7f4ee69fbac0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="AdcConfigure" ref="0x7f4ee5e2e0e0" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x7f4ee69fbac0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="45(SenseAppC.SensirionSht11C):/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc" nicename="tos.platforms.telosa.chips.sht11.SensirionSht11C" qname="SenseAppC.SensirionSht11C">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+        <short>
+ SensirionSht11C is a top-level access component for the Sensirion
+ SHT11 model humidity and temperature sensor, available on the
+ telosb platform.</short>
+        <long>
+ SensirionSht11C is a top-level access component for the Sensirion
+ SHT11 model humidity and temperature sensor, available on the
+ telosb platform. Because this component represents one physical
+ device, simultaneous calls to read temperature and humidity will be
+ arbitrated and executed in sequential order. Feel free to read both
+ at the same time, just be aware that they'll come back
+ sequentially.
+
+ @author Gilman Tolle &lt;gtolle@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2007-04-13 21:46:18 $
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.platforms.telosa.chips.sht11.SensirionSht11C" qname="SensirionSht11C"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="57:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+          <from><interface-ref name="HumidityMetadata" ref="0x7f4ee6a15900" scoped=""/></from>
+          <to><interface-ref name="HumidityMetadata" ref="0x7f4ee5f22900" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+          <from><interface-ref name="Humidity" ref="0x7f4ee6a16240" scoped=""/></from>
+          <to><interface-ref name="Humidity" ref="0x7f4ee5f210a0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+          <from><interface-ref name="TemperatureMetadata" ref="0x7f4ee6a18aa0" scoped=""/></from>
+          <to><interface-ref name="TemperatureMetadata" ref="0x7f4ee5f24a70" scoped=""/></to>
+        </wire>
+        <wire loc="54:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+          <from><interface-ref name="Temperature" ref="0x7f4ee6a19310" scoped=""/></from>
+          <to><interface-ref name="Temperature" ref="0x7f4ee5f23220" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+          <from><interface-ref name="TempResource" ref="0x7f4ee5f20770" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x7f4ee6cb09d0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="65:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+          <from><interface-ref name="Sht11Temp" ref="0x7f4ee5f1d160" scoped=""/></from>
+          <to><interface-ref name="SensirionSht11" ref="0x7f4ee6cafd50" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+          <from><interface-ref name="HumResource" ref="0x7f4ee5f1e480" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x7f4ee6cb09d0" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/sht11/SensirionSht11C.nc">
+          <from><interface-ref name="Sht11Hum" ref="0x7f4ee5f1c610" scoped=""/></from>
+          <to><interface-ref name="SensirionSht11" ref="0x7f4ee6cafd50" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="44(SenseAppC.TimerMilliC):/opt/tinyos-2.1.2/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="SenseAppC.TimerMilliC">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/opt/tinyos-2.1.2/tos/system/TimerMilliC.nc">
+          <from><interface-ref name="Timer" ref="0x7f4ee713c370" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x7f4ee72de610" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="44:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc" nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC">
+      <documentation loc="71:/opt/tinyos-2.1.2/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="61:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x7f4ee69ec250" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x7f4ee69732f0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x7f4ee69ea280" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x7f4ee69da7d0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x7f4ee69e8630" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7f4ee697b400" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x7f4ee69e8020" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7f4ee697d6c0" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x7f4ee69db4c0" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x7f4ee6979060" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7f4ee69e72d0" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7f4ee697dcb0" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7f4ee77298d0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7f4ee6976bc0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Leds" ref="0x7f4ee6970940" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x7f4ee69dbe40" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubSend" ref="0x7f4ee69799f0" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x7f4ee6972e10" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="70:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubReceive" ref="0x7f4ee6978760" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x7f4ee6972320" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SerialPacketInfo" ref="0x7f4ee6970020" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Info" ref="0x7f4ee65da1e0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="13:SenseC.nc" nicename="SenseC" qname="SenseC">
+      <module/>
+    </component><component loc="45:/opt/tinyos-2.1.2/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="34:/opt/tinyos-2.1.2/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="51:/opt/tinyos-2.1.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x7f4ee772c5a0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x7f4ee754f020" scoped=""/></to>
+        </wire>
+        <wire loc="53:/opt/tinyos-2.1.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x7f4ee7527c40" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7f4ee75528e0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/opt/tinyos-2.1.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x7f4ee75477b0" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x7f4ee752a360" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.1.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x7f4ee754d980" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x7f4ee75296a0" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.1.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x7f4ee754cca0" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x7f4ee75289c0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/opt/tinyos-2.1.2/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x7f4ee772f3f0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7f4ee756c590" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7f4ee756cc00" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7f4ee7c7d3a0" scoped=""/></to>
+        </wire>
+        <wire loc="68:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7f4ee755f6c0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7f4ee772b790" scoped=""/></to>
+        </wire>
+        <wire loc="71:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7f4ee755fdc0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x7f4ee77298d0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

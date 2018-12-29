@@ -1,0 +1,2014 @@
+<?xml version="1.0" ?><component loc="37:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="113:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlA2" ref="0x7f87dfc22a50" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb5f6d0" scoped=""/></to>
+        </wire>
+        <wire loc="126:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB0" ref="0x7f87dfc10410" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb58b30" scoped=""/></to>
+        </wire>
+        <wire loc="108:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureA1" ref="0x7f87dfc19bb0" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb65160" scoped=""/></to>
+        </wire>
+        <wire loc="149:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB3" ref="0x7f87dfbfc020" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb3ecb0" scoped=""/></to>
+        </wire>
+        <wire loc="107:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareA1" ref="0x7f87dfc1e020" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb66480" scoped=""/></to>
+        </wire>
+        <wire loc="148:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB3" ref="0x7f87dfc03570" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb3e020" scoped=""/></to>
+        </wire>
+        <wire loc="170:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB6" ref="0x7f87dfbf9020" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb27cb0" scoped=""/></to>
+        </wire>
+        <wire loc="154:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB4" ref="0x7f87dfc0aa50" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb38220" scoped=""/></to>
+        </wire>
+        <wire loc="99:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlA0" ref="0x7f87dfc29020" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfbb59d0" scoped=""/></to>
+        </wire>
+        <wire loc="135:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB1" ref="0x7f87dfbfe020" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb4d2f0" scoped=""/></to>
+        </wire>
+        <wire loc="134:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB1" ref="0x7f87dfc05890" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb4e610" scoped=""/></to>
+        </wire>
+        <wire loc="133:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB1" ref="0x7f87dfc0f8c0" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb4f220" scoped=""/></to>
+        </wire>
+        <wire loc="115:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureA2" ref="0x7f87dfc18bb0" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb5d7a0" scoped=""/></to>
+        </wire>
+        <wire loc="156:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB4" ref="0x7f87dfbfb020" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb362f0" scoped=""/></to>
+        </wire>
+        <wire loc="140:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB2" ref="0x7f87dfc0d020" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb486d0" scoped=""/></to>
+        </wire>
+        <wire loc="114:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareA2" ref="0x7f87dfc1eda0" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb5eac0" scoped=""/></to>
+        </wire>
+        <wire loc="93:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="TimerA" ref="0x7f87dfc2a7b0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbc3540" scoped=""/></to>
+        </wire>
+        <wire loc="155:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB4" ref="0x7f87dfc023e0" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb37610" scoped=""/></to>
+        </wire>
+        <wire loc="106:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlA1" ref="0x7f87dfc285a0" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb67020" scoped=""/></to>
+        </wire>
+        <wire loc="161:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB5" ref="0x7f87dfc08020" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb306d0" scoped=""/></to>
+        </wire>
+        <wire loc="101:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureA0" ref="0x7f87dfc13b60" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb6da90" scoped=""/></to>
+        </wire>
+        <wire loc="142:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB2" ref="0x7f87dfbfd020" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb467a0" scoped=""/></to>
+        </wire>
+        <wire loc="100:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareA0" ref="0x7f87dfc1f140" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb6ede0" scoped=""/></to>
+        </wire>
+        <wire loc="141:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB2" ref="0x7f87dfc04700" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb47ac0" scoped=""/></to>
+        </wire>
+        <wire loc="163:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB5" ref="0x7f87dfbfa020" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb2e7a0" scoped=""/></to>
+        </wire>
+        <wire loc="147:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB3" ref="0x7f87dfc0c5a0" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb40b30" scoped=""/></to>
+        </wire>
+        <wire loc="120:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="TimerB" ref="0x7f87dfc12b70" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></to>
+        </wire>
+        <wire loc="162:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB5" ref="0x7f87dfc011f0" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb2fac0" scoped=""/></to>
+        </wire>
+        <wire loc="128:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB0" ref="0x7f87dfbff020" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x7f87dfb56cb0" scoped=""/></to>
+        </wire>
+        <wire loc="169:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB6" ref="0x7f87dfc00020" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb27020" scoped=""/></to>
+        </wire>
+        <wire loc="127:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB0" ref="0x7f87dfc06a20" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x7f87dfb56020" scoped=""/></to>
+        </wire>
+        <wire loc="168:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB6" ref="0x7f87dfc075a0" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x7f87dfb29b30" scoped=""/></to>
+        </wire>
+        <wire loc="94:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Overflow" ref="0x7f87dfbc1450" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbc2d80" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="95:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="VectorTimerX0" ref="0x7f87dfbc1aa0" scoped=""/></from>
+          <to><interface-ref name="VectorTimerA0" ref="0x7f87dfb22a90" scoped=""/></to>
+        </wire>
+        <wire loc="96:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="VectorTimerX1" ref="0x7f87dfbc0120" scoped=""/></from>
+          <to><interface-ref name="VectorTimerA1" ref="0x7f87dfb1e260" scoped=""/></to>
+        </wire>
+        <wire loc="102:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb6c930" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbc3540" scoped=""/></to>
+        </wire>
+        <wire loc="103:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb6a020" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbc2d80" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="109:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb64020" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbc3540" scoped=""/></to>
+        </wire>
+        <wire loc="110:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb627a0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbc2d80" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="116:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb5c610" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbc3540" scoped=""/></to>
+        </wire>
+        <wire loc="117:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb5bc50" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbc2d80" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="121:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Overflow" ref="0x7f87dfbb92f0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="122:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="VectorTimerX0" ref="0x7f87dfbb9940" scoped=""/></from>
+          <to><interface-ref name="VectorTimerB0" ref="0x7f87dfb1e9f0" scoped=""/></to>
+        </wire>
+        <wire loc="123:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="VectorTimerX1" ref="0x7f87dfbb8020" scoped=""/></from>
+          <to><interface-ref name="VectorTimerB1" ref="0x7f87dfb1d240" scoped=""/></to>
+        </wire>
+        <wire loc="129:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb55b40" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></to>
+        </wire>
+        <wire loc="130:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb532f0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="136:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb4c160" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></to>
+        </wire>
+        <wire loc="137:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb4b7a0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="143:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb45610" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></to>
+        </wire>
+        <wire loc="144:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb44c50" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="150:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb3db40" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></to>
+        </wire>
+        <wire loc="151:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb3b2f0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="157:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb35160" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></to>
+        </wire>
+        <wire loc="158:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb347a0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="164:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb2d610" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></to>
+        </wire>
+        <wire loc="165:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb2cc50" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="171:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x7f87dfb26b40" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></to>
+        </wire>
+        <wire loc="172:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x7f87dfb242f0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlA2" provided="1" ref="0x7f87dfc22a50">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlA2" ref="0x7f87dfc22a50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc22dd0" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc21020" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc211b0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc21340" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc214d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc21660" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc217f0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc21980" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc21b10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB0" provided="1" ref="0x7f87dfc10410">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB0" ref="0x7f87dfc10410" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc10790" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc10920" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc10ab0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc10c40" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc10dd0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc0f020" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc0f1b0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc0f340" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc0f4d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureA1" provided="1" ref="0x7f87dfc19bb0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureA1" ref="0x7f87dfc19bb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc18020" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfc181b0" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfc18340" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfc184d0" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfc18660" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfc187f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureB3" provided="1" ref="0x7f87dfbfc020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureB3" ref="0x7f87dfbfc020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfbfc3a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfbfc530" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfbfc6c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbfc850" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbfc9e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfbfcb70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareA1" provided="1" ref="0x7f87dfc1e020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareA1" ref="0x7f87dfc1e020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc1e3a0" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc1e530" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc1e6c0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc1e850" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc1e9e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB3" provided="1" ref="0x7f87dfc03570">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB3" ref="0x7f87dfc03570" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc038f0" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc03a80" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc03c10" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc03da0" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc02020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="71:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureB6" provided="1" ref="0x7f87dfbf9020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureB6" ref="0x7f87dfbf9020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfbf93a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfbf9530" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfbf96c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbf9850" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbf99e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfbf9b70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB4" provided="1" ref="0x7f87dfc0aa50">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB4" ref="0x7f87dfc0aa50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc0add0" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc09020" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc091b0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc09340" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc094d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc09660" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc097f0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc09980" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc09b10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlA0" provided="1" ref="0x7f87dfc29020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlA0" ref="0x7f87dfc29020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc293a0" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc29530" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc296c0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc29850" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc299e0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc29b70" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc29d00" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc28020" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc281b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="66:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureB1" provided="1" ref="0x7f87dfbfe020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureB1" ref="0x7f87dfbfe020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfbfe3a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfbfe530" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfbfe6c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbfe850" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbfe9e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfbfeb70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB1" provided="1" ref="0x7f87dfc05890">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB1" ref="0x7f87dfc05890" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc05c10" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc05da0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc04020" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc041b0" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc04340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB1" provided="1" ref="0x7f87dfc0f8c0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB1" ref="0x7f87dfc0f8c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc0fd40" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc0e020" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc0e1b0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc0e340" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc0e4d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc0e660" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc0e7f0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc0e980" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc0eb10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureA2" provided="1" ref="0x7f87dfc18bb0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureA2" ref="0x7f87dfc18bb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc12020" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfc121b0" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfc12340" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfc124d0" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfc12660" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfc127f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="69:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureB4" provided="1" ref="0x7f87dfbfb020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureB4" ref="0x7f87dfbfb020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfbfb3a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfbfb530" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfbfb6c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbfb850" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbfb9e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfbfbb70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB2" provided="1" ref="0x7f87dfc0d020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB2" ref="0x7f87dfc0d020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc0d3a0" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc0d530" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc0d6c0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc0d850" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc0d9e0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc0db70" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc0dd00" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc0c020" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc0c1b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareA2" provided="1" ref="0x7f87dfc1eda0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareA2" ref="0x7f87dfc1eda0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc1a180" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc1a310" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc1a4a0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc1a630" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc1a7c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="TimerA" provided="1" ref="0x7f87dfc2a7b0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerA" ref="0x7f87dfc2a7b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfc2ab30" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfc2acc0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc2ae50" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfc33020" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc331b0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfc33340" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfc334d0" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfc33660" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfc337f0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfc33980" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfc33b10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB4" provided="1" ref="0x7f87dfc023e0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB4" ref="0x7f87dfc023e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc02760" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc028f0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc02a80" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc02c10" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc02da0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlA1" provided="1" ref="0x7f87dfc285a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlA1" ref="0x7f87dfc285a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc28920" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc28ab0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc28c40" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc28dd0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc22020" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc221b0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc22340" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc224d0" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc22660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB5" provided="1" ref="0x7f87dfc08020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB5" ref="0x7f87dfc08020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc083a0" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc08530" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc086c0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc08850" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc089e0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc08b70" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc08d00" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc07020" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc071b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureA0" provided="1" ref="0x7f87dfc13b60">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureA0" ref="0x7f87dfc13b60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc19020" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfc191b0" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfc19340" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfc194d0" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfc19660" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfc197f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureB2" provided="1" ref="0x7f87dfbfd020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureB2" ref="0x7f87dfbfd020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfbfd3a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfbfd530" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfbfd6c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbfd850" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbfd9e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfbfdb70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareA0" provided="1" ref="0x7f87dfc1f140">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareA0" ref="0x7f87dfc1f140" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc1f4c0" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc1f650" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc1f7e0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc1f970" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc1fb00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB2" provided="1" ref="0x7f87dfc04700">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB2" ref="0x7f87dfc04700" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc04a80" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc04c10" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc04da0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc03020" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc031b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="70:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureB5" provided="1" ref="0x7f87dfbfa020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureB5" ref="0x7f87dfbfa020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfbfa3a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfbfa530" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfbfa6c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbfa850" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbfa9e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfbfab70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB3" provided="1" ref="0x7f87dfc0c5a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB3" ref="0x7f87dfc0c5a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc0c920" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc0cab0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc0cc40" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc0cdd0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc0a020" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc0a1b0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc0a340" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc0a4d0" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc0a660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="TimerB" provided="1" ref="0x7f87dfc12b70">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerB" ref="0x7f87dfc12b70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfc11020" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfc111b0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc11340" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfc114d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc11660" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfc117f0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfc11980" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfc11b10" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfc11ca0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfc11e30" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfc10020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB5" provided="1" ref="0x7f87dfc011f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB5" ref="0x7f87dfc011f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc01570" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc01700" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc01890" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc01a20" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc01bb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CaptureB0" provided="1" ref="0x7f87dfbff020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CaptureB0" ref="0x7f87dfbff020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfbff3a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfbff530" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfbff6c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbff850" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbff9e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfbffb70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB6" provided="1" ref="0x7f87dfc00020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB6" ref="0x7f87dfc00020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc005a0" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc00730" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc008c0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc00a50" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc00be0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB0" provided="1" ref="0x7f87dfc06a20">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB0" ref="0x7f87dfc06a20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfc06da0" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfc05020" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfc051b0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfc05340" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfc054d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB6" provided="1" ref="0x7f87dfc075a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB6" ref="0x7f87dfc075a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfc07920" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfc07ab0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfc07c40" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfc07dd0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfc06020" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfc061b0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfc06340" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfc064d0" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfc06660" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb627a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb627a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb62b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb67020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb67020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb673a0" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb67530" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb676c0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb67850" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb679e0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb67b70" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb67d00" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb66020" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb661b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCommonP.nc" name="VectorTimerA0" provided="1" ref="0x7f87dfb22a90">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCommonP" qname="Msp430TimerCommonP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="VectorTimerA0" ref="0x7f87dfb22a90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb22e10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="Timer" provided="1" ref="0x7f87dfbbb3e0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerB"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfbbb3e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfbbb760" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfbbb8f0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfbbba80" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfbbbc10" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfbbbda0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbba020" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfbba1b0" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbba340" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfbba4d0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfbba660" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfbba7f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb26b40">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB6"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb26b40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb25020" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb251b0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb25340" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb254d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb25660" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb257f0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb25980" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb25b10" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb25ca0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb25e30" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb24020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb6c930">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb6c930" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb6ccb0" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb6ce40" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb6b020" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb6b1b0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb6b340" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb6b4d0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb6b660" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb6b7f0" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb6b980" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb6bb10" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb6bca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="VectorTimerX1" provided="0" ref="0x7f87dfbc0120">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerA"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="VectorTimerX1" ref="0x7f87dfbc0120" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfbc04a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="Event" provided="1" ref="0x7f87dfbbabf0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerB"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfbbabf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7f87e0c43160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfbb9020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCommonP.nc" name="VectorTimerA1" provided="1" ref="0x7f87dfb1e260">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCommonP" qname="Msp430TimerCommonP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="VectorTimerA1" ref="0x7f87dfb1e260" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb1e5e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb347a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB4"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb347a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb34b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb2fac0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB5"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb2fac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb2fe40" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb2e020" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb2e1b0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb2e340" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb2e4d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb362f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB4"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb362f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb36670" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb36800" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb36990" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb36b20" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb36cb0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb36e40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="Timer" provided="1" ref="0x7f87dfbc3540">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerA"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfbc3540" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfbc38c0" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfbc3a50" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfbc3be0" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfbc3d70" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfbc2020" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfbc21b0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfbc2340" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfbc24d0" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfbc2660" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfbc27f0" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfbc2980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb532f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb532f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb53670" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb3b2f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB3"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb3b2f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb3b670" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="VectorTimerX0" provided="0" ref="0x7f87dfbb9940">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerB"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="VectorTimerX0" ref="0x7f87dfbb9940" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfbb9cc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb306d0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB5"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb306d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb30a50" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb30be0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb30d70" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb2f020" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb2f1b0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb2f340" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb2f4d0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb2f660" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb2f7f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="Event" provided="1" ref="0x7f87dfbc2d80">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerA"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfbc2d80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7f87e0c43160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfbc1180" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb45610">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb45610" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb45990" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb45b20" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb45cb0" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb45e40" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb44020" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb441b0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb44340" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb444d0" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb44660" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb447f0" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb44980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb2cc50">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB5"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb2cc50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb2b020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb2e7a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB5"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb2e7a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb2eb20" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb2ecb0" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb2ee40" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb2d020" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb2d1b0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb2d340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb65160">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb65160" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb654e0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb65670" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb65800" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb65990" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb65b20" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb65cb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb29b30">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB6"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb29b30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb28020" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb281b0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb28340" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb284d0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb28660" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb287f0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb28980" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb28b10" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb28ca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb56020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb56020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb563a0" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb56530" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb566c0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb56850" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb569e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb5d7a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb5d7a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb5db20" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb5dcb0" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb5de40" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb5c020" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb5c1b0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb5c340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb4e610">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb4e610" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb4e990" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb4eb20" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb4ecb0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb4ee40" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb4d020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb2d610">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB5"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb2d610" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb2d990" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb2db20" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb2dcb0" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb2de40" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb2c020" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb2c1b0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb2c340" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb2c4d0" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb2c660" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb2c7f0" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb2c980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb38220">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB4"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb38220" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb385a0" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb38730" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb388c0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb38a50" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb38be0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb38d70" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb37020" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb371b0" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb37340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb467a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb467a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb46b20" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb46cb0" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb46e40" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb45020" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb451b0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb45340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb44c50">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb44c50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb42020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb5eac0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb5eac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb5ee40" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb5d020" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb5d1b0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb5d340" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb5d4d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb27cb0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB6"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb27cb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb260a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb26230" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb263c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb26550" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb266e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb26870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb5c610">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb5c610" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb5c990" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb5cb20" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb5ccb0" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb5ce40" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb5b020" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb5b1b0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb5b340" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb5b4d0" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb5b660" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb5b7f0" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb5b980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb6ede0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb6ede0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb6d180" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb6d310" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb6d4a0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb6d630" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb6d7c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb55b40">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb55b40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb54020" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb541b0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb54340" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb544d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb54660" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb547f0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb54980" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb54b10" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb54ca0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb54e30" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb53020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb56cb0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb56cb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb550a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb55230" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb553c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb55550" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb556e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb55870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb5bc50">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb5bc50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb5a020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb5f6d0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb5f6d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb5fa50" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb5fbe0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb5fd70" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb5e020" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb5e1b0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb5e340" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb5e4d0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb5e660" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb5e7f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb4b7a0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb4b7a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb4bb20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCommonP.nc" name="VectorTimerB1" provided="1" ref="0x7f87dfb1d240">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCommonP" qname="Msp430TimerCommonP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="VectorTimerB1" ref="0x7f87dfb1d240" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb1d5c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="VectorTimerX0" provided="0" ref="0x7f87dfbc1aa0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerA"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="VectorTimerX0" ref="0x7f87dfbc1aa0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfbc1e20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb4f220">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb4f220" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb4f5a0" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb4f730" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb4f8c0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb4fa50" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb4fbe0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb4fd70" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb4e020" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb4e1b0" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb4e340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb6a020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb6a020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb6a3a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb47ac0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb47ac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb47e40" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb46020" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb461b0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb46340" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb464d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="Overflow" provided="0" ref="0x7f87dfbc1450">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerA"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Overflow" ref="0x7f87dfbc1450" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfbc17d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="Overflow" provided="0" ref="0x7f87dfbb92f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerB"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Overflow" ref="0x7f87dfbb92f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfbb9670" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb486d0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB2"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb486d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb48a50" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb48be0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb48d70" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb47020" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb471b0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb47340" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb474d0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb47660" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb477f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Event" provided="0" ref="0x7f87dfb242f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB6"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Event" ref="0x7f87dfb242f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb24670" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCommonP.nc" name="VectorTimerB0" provided="1" ref="0x7f87dfb1e9f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCommonP" qname="Msp430TimerCommonP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="VectorTimerB0" ref="0x7f87dfb1e9f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfb1ed70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb3e020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB3"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb3e020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb3e3a0" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb3e530" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb3e6c0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb3e850" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb3e9e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb35160">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB4"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb35160" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb354e0" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb35670" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb35800" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb35990" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb35b20" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb35cb0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb35e40" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb34020" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb341b0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb34340" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb344d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb4d2f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb4d2f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb4d670" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb4d800" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb4d990" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb4db20" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb4dcb0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb4de40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb37610">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB4"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb37610" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb37990" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb37b20" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb37cb0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb37e40" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb36020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb4c160">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb4c160" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb4c4e0" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb4c670" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb4c800" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb4c990" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb4cb20" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb4ccb0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb4ce40" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb4b020" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb4b1b0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb4b340" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb4b4d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb3ecb0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB3"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb3ecb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb3d0a0" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb3d230" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb3d3c0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb3d550" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb3d6e0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb3d870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfbb59d0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfbb59d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfbb5d50" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb6e020" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb6e1b0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb6e340" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb6e4d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb6e660" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb6e7f0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb6e980" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb6eb10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb64020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb64020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb643a0" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb64530" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb646c0" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb64850" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb649e0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb64b70" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb64d00" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb62020" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb621b0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb62340" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb624d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb66480">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb66480" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb66800" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb66990" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb66b20" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb66cb0" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb66e40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb40b30">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB3"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb40b30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb3f020" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb3f1b0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb3f340" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb3f4d0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb3f660" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb3f7f0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb3f980" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb3fb10" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb3fca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" name="VectorTimerX1" provided="0" ref="0x7f87dfbb8020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerB"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="VectorTimerX1" ref="0x7f87dfbb8020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerEvent" qname="Msp430TimerEvent"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x7f87dfbb83a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Compare" provided="1" ref="0x7f87dfb27020">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB6"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Compare" ref="0x7f87dfb27020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb273a0" scoped=""/>
+        <function-ref name="setEvent" ref="0x7f87dfb27530" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x7f87dfb276c0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x7f87dfb27850" scoped=""/>
+        <function-ref name="fired" ref="0x7f87dfb279e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Control" provided="1" ref="0x7f87dfb58b30">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Control" ref="0x7f87dfb58b30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x7f87dfb57020" scoped=""/>
+        <function-ref name="getControl" ref="0x7f87dfb571b0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb57340" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x7f87dfb574d0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x7f87dfb57660" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb577f0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x7f87dfb57980" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x7f87dfb57b10" scoped=""/>
+        <function-ref name="setControl" ref="0x7f87dfb57ca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Capture" provided="1" ref="0x7f87dfb6da90">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA0"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Capture" ref="0x7f87dfb6da90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Capture" qname="Msp430Capture"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x7f87dfb6de10" scoped=""/>
+        <function-ref name="setSynchronous" ref="0x7f87dfb6c020" scoped=""/>
+        <function-ref name="captured" ref="0x7f87dfb6c1b0" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb6c340" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb6c4d0" scoped=""/>
+        <function-ref name="setEdge" ref="0x7f87dfb6c660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" name="Timer" provided="0" ref="0x7f87dfb3db40">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB3"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x7f87dfb3db40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87dfb3c020" scoped=""/>
+        <function-ref name="setClockSource" ref="0x7f87dfb3c1b0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x7f87dfb3c340" scoped=""/>
+        <function-ref name="get" ref="0x7f87dfb3c4d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x7f87dfb3c660" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x7f87dfb3c7f0" scoped=""/>
+        <function-ref name="getMode" ref="0x7f87dfb3c980" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x7f87dfb3cb10" scoped=""/>
+        <function-ref name="overflow" ref="0x7f87dfb3cca0" scoped=""/>
+        <function-ref name="setMode" ref="0x7f87dfb3ce30" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x7f87dfb3b020" scoped=""/>
+      </interface-functions>
+    </interface><component loc="39(Msp430TimerC.Msp430TimerB5):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB5">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="8">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:396">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:412">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerB4):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB4">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="7">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:394">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:410">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerB6):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB6">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="9">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:398">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:414">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerB1):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB1">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="4">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:388">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:404">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerB0):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB0">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="3">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:386">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:402">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerB3):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB3">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="6">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:392">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:408">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerB2):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerB2">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="5">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:390">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:406">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="2:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCommonP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCommonP" qname="Msp430TimerCommonP" safe="">
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerA0):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA0">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:354">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:370">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerA1):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA1">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:356">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:372">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerA2):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc" nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerC.Msp430TimerA2">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerCapComP.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="2">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerCapComP" qname="Msp430TimerCapComP"/>
+        <arguments>
+          <value cst="I:358">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:374">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerB):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerB">
+      <documentation loc="2:/opt/tinyos-2.1.2/tos/chips/msp430/msp430regtypes.h">
+        <short>
+ Copyright (c) 2011 Eric B.</short>
+        <long>
+ Copyright (c) 2011 Eric B. Decker
+ Copyright (c) 2009 DEXMA SENSORS SL
+ Copyright (c) 2000-2003 The Regents of the University of California.  
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+ - Neither the name of the copyright holder nor the names of
+   its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+ THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerP"/>
+        <arguments>
+          <value cst="I:286">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:400">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:384">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:1">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:4">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:2">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:256">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:512">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:1">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="39(Msp430TimerC.Msp430TimerA):/opt/tinyos-2.1.2/tos/chips/msp430/timer/Msp430TimerP.nc" nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerC.Msp430TimerA">
+      <documentation loc="2:/opt/tinyos-2.1.2/tos/chips/msp430/msp430regtypes.h">
+        <short>
+ Copyright (c) 2011 Eric B.</short>
+        <long>
+ Copyright (c) 2011 Eric B. Decker
+ Copyright (c) 2009 DEXMA SENSORS SL
+ Copyright (c) 2000-2003 The Regents of the University of California.  
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+ - Neither the name of the copyright holder nor the names of
+   its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+ THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.timer.Msp430TimerP" qname="Msp430TimerP"/>
+        <arguments>
+          <value cst="I:302">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:368">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:352">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:1">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:4">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:2">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:256">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:512">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+          <value cst="I:0">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

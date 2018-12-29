@@ -1,0 +1,313 @@
+<?xml version="1.0" ?><component loc="55:/opt/tinyos-2.1.2/tos/lib/printf/PrintfC.nc" nicename="tos.lib.printf.PrintfC" qname="PrintfC">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/lib/printf/printf.h">
+        <short>
+
+ </short>
+        <long>
+
+ @author Kevin Klues (klueska@cs.wustl.edu)
+ @version $Revision: 1.17 $
+ @date $Date: 2010-06-29 22:07:50 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="65:/opt/tinyos-2.1.2/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7f87dfca7d90" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7f87df0a4380" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Queue" ref="0x7f87df0a32f0" scoped=""/></from>
+          <to><interface-ref name="Queue" ref="0x7f87df0ccb70" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="AMSend" ref="0x7f87df09e8d0" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x7f87df0d2540" scoped=""/></to>
+        </wire>
+        <wire loc="68:/opt/tinyos-2.1.2/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Packet" ref="0x7f87df09c5d0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7f87df0d1270" scoped=""/></to>
+        </wire>
+        <wire loc="71:/opt/tinyos-2.1.2/tos/lib/printf/PrintfC.nc">
+          <from><interface-ref name="Putchar" ref="0x7f87df07d020" scoped=""/></from>
+          <to><interface-ref name="Putchar" ref="0x7f87df0a1a30" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="43:/opt/tinyos-2.1.2/tos/system/QueueC.nc" name="Queue" provided="1" ref="0x7f87df0ccb70">
+      <component-ref nicename="tos.system.QueueC" qname="PrintfC.QueueC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Queue" ref="0x7f87df0ccb70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Queue" qname="Queue"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7f87e0c43160"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="head" ref="0x7f87df0a9550" scoped=""/>
+        <function-ref name="enqueue" ref="0x7f87df0a82f0" scoped=""/>
+        <function-ref name="element" ref="0x7f87df0a8960" scoped=""/>
+        <function-ref name="maxSize" ref="0x7f87df0a90d0" scoped=""/>
+        <function-ref name="dequeue" ref="0x7f87df0a9c00" scoped=""/>
+        <function-ref name="empty" ref="0x7f87df0cb790" scoped=""/>
+        <function-ref name="size" ref="0x7f87df0cbc10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc" name="AMSend" provided="1" ref="0x7f87df0d2540">
+      <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="PrintfC.SerialAMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x7f87df0d2540" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f87df0d28c0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f87df0d2a50" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f87df0d2be0" scoped=""/>
+        <function-ref name="cancel" ref="0x7f87df0d2d70" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f87df0d1020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/lib/printf/PutcharC.nc" name="Putchar" provided="0" ref="0x7f87df07d020">
+      <component-ref nicename="tos.lib.printf.PutcharC" qname="PutcharC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Putchar" ref="0x7f87df07d020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.printf.Putchar" qname="Putchar"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putchar" ref="0x7f87df07d3a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/opt/tinyos-2.1.2/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x7f87dfca7d90">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x7f87dfca7d90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7f87dfca6180" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="90:/opt/tinyos-2.1.2/tos/lib/printf/PrintfP.nc" name="Putchar" provided="1" ref="0x7f87df0a1a30">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Putchar" ref="0x7f87df0a1a30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.printf.Putchar" qname="Putchar"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="putchar" ref="0x7f87df0a1db0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="94:/opt/tinyos-2.1.2/tos/lib/printf/PrintfP.nc" name="AMSend" provided="0" ref="0x7f87df09e8d0">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x7f87df09e8d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f87df09ec50" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f87df09ede0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f87df09c020" scoped=""/>
+        <function-ref name="cancel" ref="0x7f87df09c1b0" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f87df09c340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="95:/opt/tinyos-2.1.2/tos/lib/printf/PrintfP.nc" name="Packet" provided="0" ref="0x7f87df09c5d0">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x7f87df09c5d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87df09c950" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7f87df09cae0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f87df09cc70" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f87df09ce00" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7f87df09b020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="89:/opt/tinyos-2.1.2/tos/lib/printf/PrintfP.nc" name="Init" provided="1" ref="0x7f87df0a4380">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x7f87df0a4380" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x7f87df0a4700" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc" name="Packet" provided="1" ref="0x7f87df0d1270">
+      <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="PrintfC.SerialAMSenderC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x7f87df0d1270" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f87df0d15f0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7f87df0d1780" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f87df0d1910" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f87df0d1aa0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7f87df0d1c30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/opt/tinyos-2.1.2/tos/lib/printf/PrintfP.nc" name="Queue" provided="0" ref="0x7f87df0a32f0">
+      <component-ref nicename="tos.lib.printf.PrintfP" qname="PrintfP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Queue" ref="0x7f87df0a32f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Queue" qname="Queue"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7f87e0c43160"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="head" ref="0x7f87df0a2da0" scoped=""/>
+        <function-ref name="enqueue" ref="0x7f87df09fb40" scoped=""/>
+        <function-ref name="element" ref="0x7f87df09e220" scoped=""/>
+        <function-ref name="maxSize" ref="0x7f87df0a2920" scoped=""/>
+        <function-ref name="dequeue" ref="0x7f87df09f490" scoped=""/>
+        <function-ref name="empty" ref="0x7f87df0a2020" scoped=""/>
+        <function-ref name="size" ref="0x7f87df0a24a0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="42(PrintfC.QueueC):/opt/tinyos-2.1.2/tos/system/QueueC.nc" nicename="tos.system.QueueC" qname="PrintfC.QueueC">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/system/QueueC.nc">
+        <short>
+  A general FIFO queue component, whose queue has a bounded size.</short>
+        <long>
+  A general FIFO queue component, whose queue has a bounded size.
+
+  @author Philip Levis
+  @author Geoffrey Mainland
+  @date   $Date: 2009-06-25 18:37:24 $
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.QueueC" qname="QueueC"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7f87e0c43160"/></typename>
+          </type-int>
+          <value cst="I:128">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="42:/opt/tinyos-2.1.2/tos/lib/printf/PutcharC.nc" nicename="tos.lib.printf.PutcharC" qname="PutcharC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/printf/PutcharC.nc">
+        <short>
+ This component provides a TinyOS-compatible bridge to the
+ system-specific mechanism of providing single-character output to
+ the environment's printf(3c) infrastructure.</short>
+        <long>
+ This component provides a TinyOS-compatible bridge to the
+ system-specific mechanism of providing single-character output to
+ the environment's printf(3c) infrastructure.  Components that
+ provide a libc-based printf facility in TinyOS should implement the
+ Putchar interface and connect it to this module.
+
+ @author Peter A. Bigot &lt;pabigot@users.sourceforge.net&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="49:/opt/tinyos-2.1.2/tos/lib/printf/PutcharC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7f87dfca7d90" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7f87df07a360" scoped=""/></to>
+        </wire>
+        <wire loc="50:/opt/tinyos-2.1.2/tos/lib/printf/PutcharC.nc">
+          <from><interface-ref name="Putchar" ref="0x7f87df07a9c0" scoped=""/></from>
+          <to><interface-ref name="Putchar" ref="0x7f87df07d020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/opt/tinyos-2.1.2/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x7f87dfca5870" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x7f87dfada590" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x7f87dfadac00" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x7f87e01b43a0" scoped=""/></to>
+        </wire>
+        <wire loc="68:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x7f87dfad96c0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x7f87dfca6da0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x7f87dfad9dc0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x7f87dfca7d90" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="87:/opt/tinyos-2.1.2/tos/lib/printf/PrintfP.nc" nicename="tos.lib.printf.PrintfP" qname="PrintfP" safe="">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/lib/printf/printf.h">
+        <short>
+
+ </short>
+        <long>
+
+ @author Kevin Klues (klueska@cs.wustl.edu)
+ @version $Revision: 1.17 $
+ @date $Date: 2010-06-29 22:07:50 $
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="47(PrintfC.SerialAMSenderC):/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc" nicename="tos.lib.serial.SerialAMSenderC" qname="PrintfC.SerialAMSenderC">
+      <documentation loc="71:/opt/tinyos-2.1.2/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="SerialAMSenderC"/>
+        <arguments>
+          <value cst="I:100">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="63:/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMSend" ref="0x7f87df0d2540" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x7f87deae5640" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Packet" ref="0x7f87df0d1270" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x7f87df5637e0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7f87df0d1e80" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7f87df562470" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Acks" ref="0x7f87df0cf5d0" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x7f87df560b20" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Send" ref="0x7f87deae42e0" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x7f87df5c1cf0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.1.2/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x7f87deae3020" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x7f87df562470" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

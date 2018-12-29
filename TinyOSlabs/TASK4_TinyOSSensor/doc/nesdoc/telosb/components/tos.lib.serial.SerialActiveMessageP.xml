@@ -1,0 +1,113 @@
+<?xml version="1.0" ?><component abstract="" loc="45:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageP.nc" nicename="tos.lib.serial.SerialActiveMessageP" qname="SerialActiveMessageP">
+      <documentation loc="71:/opt/tinyos-2.1.2/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="54:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageP.nc" name="SubSend" provided="0" ref="0x7f4ee69c86e0">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageP" qname="SerialActiveMessageP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubSend" ref="0x7f4ee69c86e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee69c8a60" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee69c8bf0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee69c8d80" scoped=""/>
+        <function-ref name="cancel" ref="0x7f4ee69d3020" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee69d31b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageP.nc" name="SubReceive" provided="0" ref="0x7f4ee69d3500">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageP" qname="SerialActiveMessageP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubReceive" ref="0x7f4ee69d3500" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x7f4ee69d3880" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageP.nc" name="AMSend" provided="1" ref="0x7f4ee69d9640">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageP" qname="SerialActiveMessageP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x7f4ee69d9640" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7f4ee7787550"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x7f4ee69d99c0" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee69d9b50" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee69d9ce0" scoped=""/>
+        <function-ref name="cancel" ref="0x7f4ee69d9e70" scoped=""/>
+        <function-ref name="sendDone" ref="0x7f4ee69d8030" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageP.nc" name="Packet" provided="1" ref="0x7f4ee69d5440">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageP" qname="SerialActiveMessageP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Packet" ref="0x7f4ee69d5440" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x7f4ee69d57c0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x7f4ee69d5950" scoped=""/>
+        <function-ref name="getPayload" ref="0x7f4ee69d5ae0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x7f4ee69d5c70" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x7f4ee69d5e00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageP.nc" name="Receive" provided="1" ref="0x7f4ee69d8810">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageP" qname="SerialActiveMessageP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x7f4ee69d8810" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x7f4ee7787550"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x7f4ee69d8b90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageP.nc" name="PacketAcknowledgements" provided="1" ref="0x7f4ee69d41a0">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageP" qname="SerialActiveMessageP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketAcknowledgements" ref="0x7f4ee69d41a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x7f4ee69d4520" scoped=""/>
+        <function-ref name="noAck" ref="0x7f4ee69d46b0" scoped=""/>
+        <function-ref name="wasAcked" ref="0x7f4ee69d4840" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/serial/SerialActiveMessageP.nc" name="AMPacket" provided="1" ref="0x7f4ee69d8e40">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageP" qname="SerialActiveMessageP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMPacket" ref="0x7f4ee69d8e40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x7f4ee69d61e0" scoped=""/>
+        <function-ref name="source" ref="0x7f4ee69d6370" scoped=""/>
+        <function-ref name="address" ref="0x7f4ee69d6500" scoped=""/>
+        <function-ref name="destination" ref="0x7f4ee69d6690" scoped=""/>
+        <function-ref name="setSource" ref="0x7f4ee69d6820" scoped=""/>
+        <function-ref name="setDestination" ref="0x7f4ee69d69b0" scoped=""/>
+        <function-ref name="type" ref="0x7f4ee69d6b40" scoped=""/>
+        <function-ref name="setType" ref="0x7f4ee69d6cd0" scoped=""/>
+        <function-ref name="isForMe" ref="0x7f4ee69d6e60" scoped=""/>
+        <function-ref name="setGroup" ref="0x7f4ee69d5020" scoped=""/>
+        <function-ref name="localGroup" ref="0x7f4ee69d51b0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

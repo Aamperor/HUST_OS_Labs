@@ -1,0 +1,18 @@
+<area shape="rect" id="node2" href="../chtml/tos.chips.msp430.adc12.AdcReadClientC.html" title="AdcReadClientC" alt="" coords="5,116,147,175">
+<area shape="poly" id="edge1" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="79,53,79,103,73,103,73,53">
+<area shape="rect" id="edge1-label" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="76,77,168,92">
+<area shape="rect" id="node8" href="../chtml/tos.chips.msp430.sensors.Msp430InternalVoltageP.html" title="Msp430InternalVoltageP" alt="" coords="298,237,478,285">
+<area shape="poly" id="edge5" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="83,174,90,194,103,211,133,226,177,238,285,252,284,257,176,243,131,231,100,215,85,197,78,176">
+<area shape="rect" id="edge5-label" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="101,199,383,213">
+<area shape="rect" id="node4" href="../chtml/tos.chips.msp430.adc12.AdcReadNowClientC.html" title="AdcReadNowClientC" alt="" coords="301,116,475,175">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.ReadNow.html" title="ReadNow&lt;uint16_t&gt;" alt="" coords="312,54,312,73,317,91,327,105,322,108,312,93,307,74,306,54">
+<area shape="rect" id="edge2-label" href="../ihtml/tos.interfaces.ReadNow.html" title="ReadNow&lt;uint16_t&gt;" alt="" coords="315,77,433,92">
+<area shape="poly" id="edge7" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="391,175,391,223,385,223,385,175">
+<area shape="rect" id="edge7-label" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="388,199,669,213">
+<area shape="rect" id="node6" href="../chtml/tos.chips.msp430.adc12.AdcReadStreamClientC.html" title="AdcReadStreamClientC" alt="" coords="607,116,793,175">
+<area shape="poly" id="edge3" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;" alt="" coords="703,53,703,103,697,103,697,53">
+<area shape="rect" id="edge3-label" href="../ihtml/tos.interfaces.ReadStream.html" title="ReadStream&lt;uint16_t&gt;" alt="" coords="700,77,829,92">
+<area shape="poly" id="edge6" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="697,176,688,197,672,215,642,230,597,242,492,257,491,251,596,237,640,225,669,211,683,194,692,174">
+<area shape="rect" id="edge6-label" href="../ihtml/tos.interfaces.AdcConfigure.html" title="AdcConfigure&lt;msp430adc12_channel_config_t *&gt;" alt="" coords="683,199,964,213">
+<area shape="poly" id="edge4" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="456,55,436,93,426,107,422,104,431,91,451,52">
+<area shape="rect" id="edge4-label" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="441,77,492,92">

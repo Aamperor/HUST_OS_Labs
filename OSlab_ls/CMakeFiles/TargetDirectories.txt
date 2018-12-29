@@ -1,0 +1,6 @@
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/CMakeFiles/rebuild_cache.dir
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/CMakeFiles/myls.dir
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/CMakeFiles/edit_cache.dir
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/include/CMakeFiles/rebuild_cache.dir
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/include/CMakeFiles/MYSHLIB.dir
+/home/wings/OneDrive/Labs/OSlabs/OSlab_ls/include/CMakeFiles/edit_cache.dir

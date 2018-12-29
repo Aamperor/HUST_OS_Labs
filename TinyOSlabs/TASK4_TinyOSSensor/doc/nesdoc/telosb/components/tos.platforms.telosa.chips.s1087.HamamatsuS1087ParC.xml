@@ -1,0 +1,209 @@
+<?xml version="1.0" ?><component abstract="" loc="40:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc" nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParC" qname="HamamatsuS1087ParC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+        <short>
+ HamamatsuS1087ParC is a driver for a photosynthetically-active
+ radiation sensor available on the telosb platform.</short>
+        <long>
+ HamamatsuS1087ParC is a driver for a photosynthetically-active
+ radiation sensor available on the telosb platform. 
+
+ @author Gilman Tolle &lt;gtolle@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2007-04-13 21:46:18 $
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="Read" ref="0x7f4ee6a11c00" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x7f4ee6a0a020" scoped=""/></to>
+        </wire>
+        <wire loc="50:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="ReadStream" ref="0x7f4ee6a0f4f0" scoped=""/></from>
+          <to><interface-ref name="ReadStream" ref="0x7f4ee6a05020" scoped=""/></to>
+        </wire>
+        <wire loc="53:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="DeviceMetadata" ref="0x7f4ee6a11440" scoped=""/></from>
+          <to><interface-ref name="DeviceMetadata" ref="0x7f4ee69fb170" scoped=""/></to>
+        </wire>
+        <wire loc="54:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="AdcConfigure" ref="0x7f4ee6a09830" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x7f4ee69fbac0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc">
+          <from><interface-ref name="AdcConfigure" ref="0x7f4ee6a01d00" scoped=""/></from>
+          <to><interface-ref name="AdcConfigure" ref="0x7f4ee69fbac0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc" name="Read" provided="1" ref="0x7f4ee6a11c00">
+      <component-ref nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParC" qname="HamamatsuS1087ParC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x7f4ee6a11c00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee6a10860" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee6a10ce0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc" name="ReadStream" provided="1" ref="0x7f4ee6a0f4f0">
+      <component-ref nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParC" qname="HamamatsuS1087ParC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x7f4ee6a0f4f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x7f4ee6a0c020" scoped=""/>
+        <function-ref name="postBuffer" ref="0x7f4ee6a0e110" scoped=""/>
+        <function-ref name="read" ref="0x7f4ee6a0ea80" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee6a0cad0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParC.nc" name="DeviceMetadata" provided="1" ref="0x7f4ee6a11440">
+      <component-ref nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParC" qname="HamamatsuS1087ParC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="DeviceMetadata" ref="0x7f4ee6a11440" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.DeviceMetadata" qname="DeviceMetadata"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getSignificantBits" ref="0x7f4ee6a117c0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="44:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParP.nc" name="AdcConfigure" provided="1" ref="0x7f4ee69fbac0">
+      <component-ref nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParP" qname="HamamatsuS1087ParP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x7f4ee69fbac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x7f4ee7111da0"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x7f4ee71114c0"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x7f4ee69fa790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/adc12/AdcReadClientC.nc" name="Read" provided="1" ref="0x7f4ee6a0a020">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcReadClientC" qname="HamamatsuS1087ParC.AdcReadClientC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Read" ref="0x7f4ee6a0a020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x7f4ee6a0ac10" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee6a090d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/chips/msp430/adc12/AdcReadStreamClientC.nc" name="AdcConfigure" provided="0" ref="0x7f4ee6a01d00">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcReadStreamClientC" qname="HamamatsuS1087ParC.AdcReadStreamClientC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x7f4ee6a01d00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x7f4ee7111da0"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x7f4ee71114c0"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x7f4ee69ff980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParP.nc" name="DeviceMetadata" provided="1" ref="0x7f4ee69fb170">
+      <component-ref nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParP" qname="HamamatsuS1087ParP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="DeviceMetadata" ref="0x7f4ee69fb170" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.DeviceMetadata" qname="DeviceMetadata"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getSignificantBits" ref="0x7f4ee69fb4f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/chips/msp430/adc12/AdcReadClientC.nc" name="AdcConfigure" provided="0" ref="0x7f4ee6a09830">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcReadClientC" qname="HamamatsuS1087ParC.AdcReadClientC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AdcConfigure" ref="0x7f4ee6a09830" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AdcConfigure" qname="AdcConfigure"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-qualified const="">
+                <typename><typedef-ref name="msp430adc12_channel_config_t" ref="0x7f4ee7111da0"/></typename>
+              <type-tag alignment="I:2" size="I:4"><struct-ref ref="0x7f4ee71114c0"/></type-tag>
+            </type-qualified>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfiguration" ref="0x7f4ee6a074c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/msp430/adc12/AdcReadStreamClientC.nc" name="ReadStream" provided="1" ref="0x7f4ee6a05020">
+      <component-ref nicename="tos.chips.msp430.adc12.AdcReadStreamClientC" qname="HamamatsuS1087ParC.AdcReadStreamClientC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x7f4ee6a05020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x7f4ee870c520"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x7f4ee6a02ab0" scoped=""/>
+        <function-ref name="postBuffer" ref="0x7f4ee6a05c10" scoped=""/>
+        <function-ref name="read" ref="0x7f4ee6a025e0" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee6a015a0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="42:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParP.nc" nicename="tos.platforms.telosa.chips.s1087.HamamatsuS1087ParP" qname="HamamatsuS1087ParP">
+      <documentation loc="34:/opt/tinyos-2.1.2/tos/platforms/telosa/chips/s1087/HamamatsuS1087ParP.nc">
+        <short>
+ HamamatsuS1087ParP is a driver for a photosynthetically-active
+ radiation sensor available on the telosb platform.</short>
+        <long>
+ HamamatsuS1087ParP is a driver for a photosynthetically-active
+ radiation sensor available on the telosb platform. 
+
+ @author Gilman Tolle &lt;gtolle@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2007-04-13 21:46:18 $
+</long>
+      </documentation>
+      <module/>
+    </component><component abstract="" loc="47(HamamatsuS1087ParC.AdcReadClientC):/opt/tinyos-2.1.2/tos/chips/msp430/adc12/AdcReadClientC.nc" nicename="tos.chips.msp430.adc12.AdcReadClientC" qname="HamamatsuS1087ParC.AdcReadClientC">
+      <instance>
+        <component-ref nicename="tos.chips.msp430.adc12.AdcReadClientC" qname="AdcReadClientC"/>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="47(HamamatsuS1087ParC.AdcReadStreamClientC):/opt/tinyos-2.1.2/tos/chips/msp430/adc12/AdcReadStreamClientC.nc" nicename="tos.chips.msp430.adc12.AdcReadStreamClientC" qname="HamamatsuS1087ParC.AdcReadStreamClientC">
+      <documentation loc="36:/opt/tinyos-2.1.2/tos/chips/msp430/adc12/AdcReadStreamClientC.nc">
+        <short> 
+ This component virtualizes the HIL of ADC12 on MSP430.</short>
+        <long> 
+ This component virtualizes the HIL of ADC12 on MSP430. A client must wire
+ &lt;code&gt;AdcConfigure&lt;/code&gt; to a component that returns the client's adc
+ configuration data.
+
+ @author Jan Hauer 
+ @see  Please refer to the README.txt and TEP 101 for more information about 
+ this component and its intended use.
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.msp430.adc12.AdcReadStreamClientC" qname="AdcReadStreamClientC"/>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

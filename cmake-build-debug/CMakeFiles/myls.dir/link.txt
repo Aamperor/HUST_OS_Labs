@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/myls.dir/myls.c.o  -o myls 

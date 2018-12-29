@@ -1,0 +1,5 @@
+digraph "tos.platforms.telosb.DemoSensorC" {
+  n0x7f4ee7136ca0 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "DemoSensorC.DemoSensor" [fontsize=12, shape=box,peripheries=2, style=dashed, label="VoltageC\n(DemoSensor)", URL="../chtml/tos.platforms.telosb.VoltageC.html"];
+  "n0x7f4ee7136ca0" -> "DemoSensorC.DemoSensor" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?><component abstract="" loc="23:/opt/tinyos-2.1.2/tos/system/ArbitratedReadStreamC.nc" nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC">
+      <documentation loc="10:/opt/tinyos-2.1.2/tos/system/ArbitratedReadStreamC.nc">
+        <short>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.</short>
+        <long>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.
+
+ Note that this code does not deal with unexpected events: it assumes
+ that all events it receives are in response to commands that it
+ made. See tos/chips/atm128/adc for an example of using
+ ArbitratedReadStreamC in a safe way.
+
+ @param width_t Width of the underlying ReadStream interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="23:/opt/tinyos-2.1.2/tos/system/ArbitratedReadStreamC.nc" name="nClients" ref="0x7f4ee6d703b0">
+          <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x7f4ee870c160"/></typename>
+          </type-int>
+        </constant>
+        <typedef loc="23:/opt/tinyos-2.1.2/tos/system/ArbitratedReadStreamC.nc" name="val_t" ref="0x7f4ee6d70700">
+          <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="val_t" ref="0x7f4ee6d70700" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <module/>
+    <specification><interface loc="26:/opt/tinyos-2.1.2/tos/system/ArbitratedReadStreamC.nc" name="Service" provided="0" ref="0x7f4ee6d6b700">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Service" ref="0x7f4ee6d6b700" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="val_t" ref="0x7f4ee6d70700" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7f4ee870c160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x7f4ee6d68220" scoped=""/>
+        <function-ref name="postBuffer" ref="0x7f4ee6d6a390" scoped=""/>
+        <function-ref name="read" ref="0x7f4ee6d6ad00" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee6d68cd0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/opt/tinyos-2.1.2/tos/system/ArbitratedReadStreamC.nc" name="ReadStream" provided="1" ref="0x7f4ee6d6f2c0">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadStream" ref="0x7f4ee6d6f2c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadStream" qname="ReadStream"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="val_t" ref="0x7f4ee6d70700" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7f4ee870c160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="bufferDone" ref="0x7f4ee6d6de60" scoped=""/>
+        <function-ref name="postBuffer" ref="0x7f4ee6d6d020" scoped=""/>
+        <function-ref name="read" ref="0x7f4ee6d6d990" scoped=""/>
+        <function-ref name="readDone" ref="0x7f4ee6d6c940" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:/opt/tinyos-2.1.2/tos/system/ArbitratedReadStreamC.nc" name="Resource" provided="0" ref="0x7f4ee6d67880">
+      <component-ref nicename="tos.system.ArbitratedReadStreamC" qname="ArbitratedReadStreamC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x7f4ee6d67880" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x7f4ee870c160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x7f4ee6d67c00" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x7f4ee6d67d90" scoped=""/>
+        <function-ref name="request" ref="0x7f4ee6d66020" scoped=""/>
+        <function-ref name="granted" ref="0x7f4ee6d661b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x7f4ee6d66340" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

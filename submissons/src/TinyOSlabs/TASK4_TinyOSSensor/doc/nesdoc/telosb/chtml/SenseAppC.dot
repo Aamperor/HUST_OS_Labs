@@ -1,0 +1,32 @@
+digraph "SenseAppC" {
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.LedsC.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "SenseAppC.TimerMilliC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC", URL="../chtml/tos.system.TimerMilliC.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "SenseAppC.SensirionSht11C" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SensirionSht11C", URL="../chtml/tos.platforms.telosa.chips.sht11.SensirionSht11C.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "SenseAppC.SensirionSht11C" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SensirionSht11C", URL="../chtml/tos.platforms.telosa.chips.sht11.SensirionSht11C.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "SenseAppC.HamamatsuS1087ParC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="HamamatsuS1087ParC", URL="../chtml/tos.platforms.telosa.chips.s1087.HamamatsuS1087ParC.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "SerialActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialActiveMessageC.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "SerialActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialActiveMessageC.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "SerialActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialActiveMessageC.html"];
+  "SenseC" [fontsize=12, shape=box, URL="../chtml/SenseC.html"];
+  "SerialActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialActiveMessageC.html"];
+  "SenseC" -> "MainC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "SenseC" -> "LedsC" [label="Leds", URL="../ihtml/tos.interfaces.Leds.html", fontsize=10];
+  "SenseC" -> "SenseAppC.TimerMilliC" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "SenseC" -> "SenseAppC.SensirionSht11C" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "SenseC" -> "SenseAppC.SensirionSht11C" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "SenseC" -> "SenseAppC.HamamatsuS1087ParC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "SenseC" -> "SerialActiveMessageC" [label="Packet", URL="../ihtml/tos.interfaces.Packet.html", fontsize=10];
+  "SenseC" -> "SerialActiveMessageC" [label="AMPacket", URL="../ihtml/tos.interfaces.AMPacket.html", fontsize=10];
+  "SenseC" -> "SerialActiveMessageC" [label="SplitControl", URL="../ihtml/tos.interfaces.SplitControl.html", fontsize=10];
+  "SenseC" -> "SerialActiveMessageC" [label="AMSend", URL="../ihtml/tos.interfaces.AMSend.html", fontsize=10];
+}

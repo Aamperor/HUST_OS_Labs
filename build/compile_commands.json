@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/wings/Projects/OSlabs/build",
-  "command": "/usr/bin/cc   -g   -o CMakeFiles/oslab1.dir/oslab1.c.o   -c /home/wings/Projects/OSlabs/oslab1.c",
-  "file": "/home/wings/Projects/OSlabs/oslab1.c"
-}
-]
